@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from "../../images/logo.png";
-import './home.css'
+// import './home.css'
 import { HiChevronRight } from "react-icons/hi2";
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
         </div>
 
         <div className="home__button">
-            <button type="submit" >Soil Recommendation <HiChevronRight /></button>
+            <button type="submit" >Soil Recommendation <HiChevronRight style={{ marginLeft : "20px"}}/></button>
         </div>
 
 
