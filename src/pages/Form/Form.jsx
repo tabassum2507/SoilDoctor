@@ -26,7 +26,41 @@ function Form() {
           <label>Previous Crop</label>
           <input></input>
 
-          <h3></h3>
+          <h3>Lab Details</h3>
+          <label>Farmer's Name</label>
+          <input></input>
+          <label>Sample Code</label>
+          <input></input>
+          <label>Sample Type</label>
+          <input></input>
+
+          <h3>Soil Testing Result</h3>
+          <label>pH</label>
+          <input></input>
+          <label>EC(ds/m)</label>
+          <input></input>
+          <label>OC(g/kg)</label>
+          <input></input>
+          <label>Microbes</label>
+          <input></input>
+          <label>Nitrogen(kg/acre)</label>
+          <input></input>
+          <label>Phosphorus(kg/acre)</label>
+          <input></input>
+          <label>Potassium(kg/acre)</label>
+          <input></input>
+          <label>Sulphur(mg/kg)</label>
+          <input></input>
+          <label>Iron(mg/kg)</label>
+          <input></input>
+          <label>Copper(mg/kg)</label>
+          <input></input>
+          <label>Zinc(mg/kg)</label>
+          <input></input>
+          <label>Boron(mg/kg)</label>
+          <input></input>
+          <label>Manganese(mg/kg)</label>
+          <input></input>
         </form>
 
 
