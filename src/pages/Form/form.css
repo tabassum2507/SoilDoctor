@@ -42,3 +42,12 @@
     border-radius: 15px;
     margin: 30px;
 }
+
+form > h3 {
+    padding: 40px;
+    font-size: 35px;
+}
+
+form > label {
+    padding: 20px ;
+}

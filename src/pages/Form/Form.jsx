@@ -1,6 +1,9 @@
 import React from 'react'
 import logo from "../../images/logo.png"
 import "./form.css"
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { Button } from 'react-bootstrap';
 
 function Form() {
   return (
@@ -12,7 +15,29 @@ function Form() {
 
       <div className="form__body">
         <form>
-          <h3>Personali Details</h3>
+          <h3>Personal Details</h3>
+          {/* <Row className="mb-3">
+            <Form.Group as={Col} md="2">
+              <Form.Label>
+                Farmer's Name
+              </Form.Label>
+              <Form.Control
+                required
+                type="text"
+                placeholder="Farmer's Name"
+                defaultValue="Mark"
+              />
+            
+            </Form.Group>
+          </Row> */}
+
+<Button as="a" variant="primary">
+    Button as link
+  </Button>
+
+
+      
+    
           <label>Farmer's Name</label>
           <input></input>
           <label>Mobile No.</label>
