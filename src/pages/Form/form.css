@@ -44,10 +44,22 @@
 }
 
 form > h3 {
-    padding: 40px;
+    padding: 30px 60px;
     font-size: 35px;
 }
 
-form > label {
-    padding: 20px ;
+.form__details{
+    padding: 0 60px;
+}
+
+
+.group {
+    padding: 10px;
+    
+}
+
+.span__text{
+    font-size: 13px;
+    margin-left: 5px;
+    color: gray;
 }

@@ -1,4 +1,5 @@
-import Form from "./pages/Form/Form";
+import FormReport from "./pages/Form/FormReport";
+
 import Home from "./pages/Home/Home";
 
 
@@ -6,7 +7,7 @@ function App() {
   return (
     <div className="App">
      {/* <Home /> */}
-     <Form />
+     <FormReport />
     </div>
   );
 }
