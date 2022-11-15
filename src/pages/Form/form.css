@@ -7,59 +7,75 @@
   font-family: "Montserrat", sans-serif;
 }
 
-
-
-.form__header{
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    justify-content: flex-start;
+.form__header {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  justify-content: flex-start;
 }
 
-.home__header--logo{
-    height: 50px;
-  
-  
+.home__header--logo {
+  height: 50px;
 }
 
-.home__header__name{
-    color: #a46414;
-    font-size: 25px;
-    font-weight: 600;
+.home__header__name {
+  color: #a46414;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .home__header__name > span {
-    color: #113e21;
-    font-size: 25px;
-    font-weight: 500;
+  color: #113e21;
+  font-size: 25px;
+  font-weight: 500;
 }
 
-.form__body{
-    height: 900px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    border-radius: 15px;
-    margin: 30px;
+.form__body {
+  height: auto;
+  box-shadow: rgba(50, 50, 93, 0.05) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.1) 0px 3px 7px -3px;
+  border-radius: 15px;
+  margin: 30px;
+  padding: 30px;
 }
 
-form > h3 {
-    padding: 30px 60px;
-    font-size: 35px;
+h3 {
+  padding: 30px 60px;
+  font-size: 35px;
 }
 
-.form__details{
-    padding: 0 60px;
+.form__details {
+  padding: 0 60px;
 }
-
 
 .group {
-    padding: 10px;
-    
+  padding: 10px;
 }
 
-.span__text{
-    font-size: 13px;
-    margin-left: 5px;
-    color: gray;
+.span__text {
+  font-size: 13px;
+  margin-left: 5px;
+  color: gray;
+}
+
+.area {
+  width: auto;
+  margin: 40px 0;
+}
+
+.form__button{
+
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+  height: 60px;
+  width: 150px;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  border-radius: 30px !important;
+  margin: 90px 0 30px 0;
 }
