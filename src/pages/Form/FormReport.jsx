@@ -11,58 +11,61 @@ import { schema } from "./schema";
 
 
 
-const initialValues = {
-  name: " ",
-  mobile: " ",
-  location: " ",
-  farmName: " ",
-  farmSize: " ",
-  previousCrop: " ",
-  date: " ",
-  sampleCode: " ",
-  sampleType: " ",
-  ph: " ",
-  ec: " ",
-  oc: " ",
-  microbes: " ",
-  nitrogen: " ",
-  phosphorus: " ",
-  potassium: " ",
-  sulphur: " ",
-  iron:" ",
-  copper: " ",
-  zinc: " ",
-  boron:  " ",
-  managanese: " "
+// const initialValues = {
+//   name: " ",
+//   mobile: " ",
+//   location: " ",
+//   farmName: " ",
+//   farmSize: " ",
+//   previousCrop: " ",
+//   date: " ",
+//   sampleCode: " ",
+//   sampleType: " ",
+//   ph: " ",
+//   ec: " ",
+//   oc: " ",
+//   microbes: " ",
+//   nitrogen: " ",
+//   phosphorus: " ",
+//   potassium: " ",
+//   sulphur: " ",
+//   iron:" ",
+//   copper: " ",
+//   zinc: " ",
+//   boron:  " ",
+//   managanese: " "
 
 
 
 
 
-};
+// };
 
 function FormReport() {
 
- const{ values, errors, touched, handleChange, handleSubmit } = 
- useFormik({
-  initialValues,
-  validationSchema: schema,
-    onSubmit: (values, action) => {
-      console.log(values);
-      action.resetForm();
-  },
-});
-    console.log(
-      "🚀 ~ file: Registration.jsx ~ line 25 ~ Registration ~ errors",
-      errors
- )
-;
+//  const{ values, errors, touched, handleChange, handleSubmit } = 
+//  useFormik({
+//   initialValues,
+//   validationSchema: schema,
+//     onSubmit: (values, action) => {
+//       console.log(values);
+//       action.resetForm();
+//   },
+// });
+//     console.log(
+//       "🚀 ~ file: Registration.jsx ~ line 25 ~ Registration ~ errors",
+//       errors
+//  )
+// ;
 
 
 
   return (
     
     <div className="form">
+
+
+
       <div className="form__header">
         <img
           className="home__header--logo"
@@ -74,11 +77,43 @@ function FormReport() {
         </div>
       </div>
 
+
       <div className="form__body">
+
+      <Formik
+      initialValues={{
+        name: " ",
+        mobile: " ",
+        location: " ",
+        farmName: " ",
+        farmSize: " ",
+        previousCrop: " ",
+        date: " ",
+        sampleCode: " ",
+        sampleType: " ",
+        ph: " ",
+        ec: " ",
+        oc: " ",
+        microbes: " ",
+        nitrogen: " ",
+        phosphorus: " ",
+        potassium: " ",
+        sulphur: " ",
+        iron:" ",
+        copper: " ",
+        zinc: " ",
+        boron:  " ",
+        managanese: " "
+      }}
+      onSubmit={async (values) => {
+        await new Promise((r) => setTimeout(r, 500));
+        alert(JSON.stringify(values, null, 2));
+      }}
+    >
         {/* <form onSubmit={handleSubmit}> */}
           <h3>Personal Details</h3>
 
-          <Form className="form__details" onSubmit={handleSubmit}>
+          <Form className="form__details" >
             <Row className="mb-3">
               <Form.Group as={Col} md="4" className="group">
                 <Form.Label htmlFor="name">Farmer's Name</Form.Label>
@@ -86,12 +121,10 @@ function FormReport() {
                  type="text"
                  name="name"
                  id="name"
-                 value={values.name}
-                 onChange={handleChange}
                  placeholder="Rahul Nagpal" />
               </Form.Group>
 
-              <Form.Group as={Col} md="4" className="group">
+              {/* <Form.Group as={Col} md="4" className="group">
                 <Form.Label htmlFor="mobile">Mobile No.</Form.Label>
                 <Form.Control  name="mobile" id="mobile" value={values.mobile}
                 onChange={handleChange}
@@ -132,14 +165,14 @@ function FormReport() {
                 onChange={handleChange}
                 required type="text" placeholder="Rice" />
               </Form.Group>
-            </Row>
+            </Row> */}
             {/* </Form> */}
         
 
           <h3>Sample Details</h3>
 
           {/* <Form className="form__details"> */}
-            <Row className="mb-3">
+            {/* <Row className="mb-3">
               <Form.Group as={Col} md="4" className="group">
                 <Form.Label htmlFor="date">Date Of Collection</Form.Label>
                 <Form.Control name="date" id="date"  value={values.date} required onChange={handleChange} type="date"></Form.Control>
@@ -154,7 +187,7 @@ function FormReport() {
                 <Form.Label htmlFor="sampleType">Sample Type</Form.Label>
                 <Form.Control required name="sampleType" id="sampleType" onChange={handleChange}  value={values.sampleType} type="text" placeholder="Clay" />
               </Form.Group>
-            </Row>
+            </Row> */}
             {/* </Form>
            */}
 
@@ -163,10 +196,11 @@ function FormReport() {
             <Row className="mb-3">
               <Form.Group as={Col} md="3" className="group">
                 <Form.Label htmlFor="ph">pH</Form.Label>
-                <Form.Control name="ph" id="ph"  value={values.ph} required type="number" onChange={handleChange} placeholder="9" />
+                <Form.Control name="ph" id="ph"  required type="number"  placeholder="9" />
               </Form.Group>
+              </Row>
 
-              <Form.Group as={Col} md="3" className="group">
+              {/* <Form.Group as={Col} md="3" className="group">
                 <Form.Label htmlFor="ec">
                   EC<span className="span__text">ds/m</span>
                 </Form.Label>
@@ -239,7 +273,7 @@ function FormReport() {
                   Boron<span className="span__text">mg/kg</span>
                 </Form.Label>
                 <Form.Control required name="boron"  value={values.boron} onChange={handleChange} id="boron" type="number" placeholder="" />
-              </Form.Group>
+              </Form.Group> */}
 
               {/* <Form.Group as={Col} md="2" className="group">
                 <Form.Label htmlFor="manganese">
@@ -262,14 +296,17 @@ function FormReport() {
             </FloatingLabel>
 
             <div className="form__button">
-            <Button variant="success" className="btn"></Button>{' '}
+            <Button variant="success" className="btn">Submit</Button>{' '}
             </div>
 
             
           </Form>
+
+          </Formik>
         {/* </form> */}
       </div>
     </div>
+
   );
 }
 
