@@ -1,4 +1,5 @@
 import * as React from 'react';
+import logo from "../../images/logo.png"
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -7,6 +8,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import BarChart from './BarChart';
+import "./table.css"
 
 function createTable(Parameter, Results, Range) {
    return { Parameter, Results, Range }; 
@@ -33,33 +35,47 @@ const rows = [
 export default function TableData() {
   return (
     <>
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+
+<div className="form__header">
+        <img
+          className="home__header--logo"
+          src={logo}
+          style={{ marginRight: "10px" }}
+        />
+        <div className="home__header__name">
+          Soil <span>Doctor</span>
+        </div>
+      </div>
+
+    <div className="tableData">
+    <TableContainer component={Paper} >
+      <Table sx={{ minWidth: 750 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Parameters</TableCell>
-            <TableCell align="right">Results</TableCell>
-            <TableCell align="right">Range</TableCell>
+            <TableCell className="tableName"><p>Parameters</p></TableCell>
+            <TableCell className="tableName" align="right"><p>Results</p></TableCell>
+            <TableCell className="tableName" align="right"><p>Range</p></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow
               key={row.Parameter}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
-                {row.Parameter}
+              <TableCell component="th" scope="row" className='rowData'>
+                <p>{row.Parameter}</p>
               </TableCell>
-              <TableCell align="right">{row.Results}</TableCell>
-              <TableCell align="right">{row.Range}</TableCell>
+              <TableCell align="right" className='rowData'><p>{row.Results}</p></TableCell>
+              <TableCell align="right" className='rowData'><p>{row.Range}</p></TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
 
-    <BarChart/>
-  </>
+    <BarChart className="barchart"/>
+  </div>
+    </>
+    
   );
 }

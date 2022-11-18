@@ -5,12 +5,14 @@ import TableData from "./pages/Report2/TableData";
 
 
 
+
 function App() {
   return (
     <div className="App">
      {/* <Home /> */}
      {/* <FormReport /> */}
      <TableData />
+     {/* <Report /> */}
     </div>
   );
 }
