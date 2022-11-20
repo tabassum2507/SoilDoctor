@@ -1,6 +1,7 @@
 import FormReport from "./pages/Form/FormReport";
 
 import Home from "./pages/Home/Home";
+import Report from "./pages/Report/Report";
 import TableData from "./pages/Report2/TableData";
 
 
@@ -11,8 +12,8 @@ function App() {
     <div className="App">
      {/* <Home /> */}
      {/* <FormReport /> */}
-     <TableData />
-     {/* <Report /> */}
+     {/* <TableData /> */}
+      <Report />
     </div>
   );
 }
