@@ -32,6 +32,13 @@ function Report() {
           maxValue={14}
           paddingHorizontal={29}
           paddingVertical={29}
+          customSegmentStops={[0, 6.5, 7.5 , 14]}
+          segmentColors={[
+            "#dc3912",
+            "#ff9900 ",
+            
+            "#109618 "
+          ]}
           currentValueText={"pH: ${value}"}
         />
         </div>
@@ -41,9 +48,15 @@ function Report() {
           value={2}
           labelFontSize={"15px"}
           valueTextFontSize={"20px"}
-          maxValue={5}
+          maxValue={6}
           paddingHorizontal={29}
           paddingVertical={29}
+          customSegmentStops={[0, 1.9, 3 , 6]}
+          segmentColors={[
+            " #ff5733 ",
+            "#228B22",
+            "#ffe933 "
+          ]}
           currentValueText={"EC: ${value}"}
         />
         </div>
@@ -159,7 +172,81 @@ function Report() {
         />
         </div>
 
+        <br></br>
+
+        {/* <div className="Report">
+        <ReactSpeedometer
+          value={5}
+          labelFontSize={"15px"}
+          valueTextFontSize={"20px"}
+          maxValue={14}
+          paddingHorizontal={29}
+          paddingVertical={29}
+          currentValueText={"pH: ${value}"}
+        />
+        </div>
+
         <div className="Report">
+        <ReactSpeedometer
+          value={5}
+          labelFontSize={"15px"}
+          valueTextFontSize={"20px"}
+          maxValue={14}
+          paddingHorizontal={29}
+          paddingVertical={29}
+          currentValueText={"pH: ${value}"}
+        />
+        </div>
+
+        <div className="Report">
+        <ReactSpeedometer
+          value={5}
+          labelFontSize={"15px"}
+          valueTextFontSize={"20px"}
+          maxValue={14}
+          paddingHorizontal={29}
+          paddingVertical={29}
+          currentValueText={"pH: ${value}"}
+        />
+        </div> */}
+
+        {/* <div className="Report">
+        <ReactSpeedometer
+          value={5}
+          labelFontSize={"15px"}
+          valueTextFontSize={"20px"}
+          maxValue={14}
+          paddingHorizontal={29}
+          paddingVertical={29}
+          currentValueText={"pH: ${value}"}
+        />
+        </div>
+
+        <div className="Report">
+        <ReactSpeedometer
+          value={5}
+          labelFontSize={"15px"}
+          valueTextFontSize={"20px"}
+          maxValue={14}
+          paddingHorizontal={29}
+          paddingVertical={29}
+          currentValueText={"pH: ${value}"}
+        />
+        </div>
+
+        <div className="Report">
+        <ReactSpeedometer
+          value={5}
+          labelFontSize={"15px"}
+          valueTextFontSize={"20px"}
+          maxValue={14}
+          paddingHorizontal={29}
+          paddingVertical={29}
+          currentValueText={"pH: ${value}"}
+        />
+        </div> */}
+
+        {/* <div className="Report">
         <ReactSpeedometer
           value={5}
           labelFontSize={"15px"}
@@ -205,79 +292,7 @@ function Report() {
           paddingVertical={29}
           currentValueText={"pH: ${value}"}
         />
-        </div>
-
-        <div className="Report">
-        <ReactSpeedometer
-          value={5}
-          labelFontSize={"15px"}
-          valueTextFontSize={"20px"}
-          maxValue={14}
-          paddingHorizontal={29}
-          paddingVertical={29}
-          currentValueText={"pH: ${value}"}
-        />
-        </div>
-
-        <div className="Report">
-        <ReactSpeedometer
-          value={5}
-          labelFontSize={"15px"}
-          valueTextFontSize={"20px"}
-          maxValue={14}
-          paddingHorizontal={29}
-          paddingVertical={29}
-          currentValueText={"pH: ${value}"}
-        />
-        </div>
-
-        <div className="Report">
-        <ReactSpeedometer
-          value={5}
-          labelFontSize={"15px"}
-          valueTextFontSize={"20px"}
-          maxValue={14}
-          paddingHorizontal={29}
-          paddingVertical={29}
-          currentValueText={"pH: ${value}"}
-        />
-        </div>
-
-        <div className="Report">
-        <ReactSpeedometer
-          value={5}
-          labelFontSize={"15px"}
-          valueTextFontSize={"20px"}
-          maxValue={14}
-          paddingHorizontal={29}
-          paddingVertical={29}
-          currentValueText={"pH: ${value}"}
-        />
-        </div>
-
-        <div className="Report">
-        <ReactSpeedometer
-          value={5}
-          labelFontSize={"15px"}
-          valueTextFontSize={"20px"}
-          maxValue={14}
-          paddingHorizontal={29}
-          paddingVertical={29}
-          currentValueText={"pH: ${value}"}
-        />
-        </div>
-
-        <div className="Report">
-        <ReactSpeedometer
-          value={5}
-          labelFontSize={"15px"}
-          valueTextFontSize={"20px"}
-          maxValue={14}
-          paddingHorizontal={29}
-          paddingVertical={29}
-          currentValueText={"pH: ${value}"}
-        />
-        </div>
+        </div> */}
 
 
 

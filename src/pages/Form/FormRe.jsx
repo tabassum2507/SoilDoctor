@@ -1,32 +1,17 @@
 import React from "react";
 import logo from "../../images/logo.png";
+import { Formik, Field, ErrorMessage,  } from "formik";
 import "./form.css";
-import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Badge, Button, FloatingLabel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import Form from "react-bootstrap/Form";
-import { Formik, useFormik, ErrorMessage } from "formik";
-import { schema } from "./schema";
+import Row from "react-bootstrap/Row";
 
-function FormReport() {
-  //  const{ values, errors, touched, handleChange, handleSubmit } =
-  //  useFormik({
-  //   initialValues,
-  //   validationSchema: schema,
-  //     onSubmit: (values, action) => {
-  //       console.log(values);
-  //       action.resetForm();
-  //   },
-  // });
-  //     console.log(
-  //       "🚀 ~ file: Registration.jsx ~ line 25 ~ Registration ~ errors",
-  //       errors
-  //  )
-  // ;
-
+function FormRe() {
   return (
     <div className="form">
+      {/* header */}
       <div className="form__header">
         <img
           className="home__header--logo"
@@ -38,50 +23,67 @@ function FormReport() {
         </div>
       </div>
 
+      {/* form body */}
+
       <div className="form__body">
+        {/* formik */}
+
         <Formik
           initialValues={{
-            name: " ",
-            // mobile: " ",
-            // location: " ",
-            // farmName: " ",
-            // farmSize: " ",
-            // previousCrop: " ",
-            // date: " ",
-            // sampleCode: " ",
-            // sampleType: " ",
-            // ph: " ",
-            // ec: " ",
-            // oc: " ",
-            // microbes: " ",
-            // nitrogen: " ",
-            // phosphorus: " ",
-            // potassium: " ",
-            // sulphur: " ",
-            // iron: " ",
-            // copper: " ",
-            // zinc: " ",
-            // boron: " ",
-            // managanese: " ",
-          }}
-          validate = {(values) => {
-            const errors = {};
+           name: " ",
+           mobile: " ",
+           location: " ",
+           farmName: " ",
+           farmSize: " ",
+           previousCrop: " ",
+           date: " ",
+           sampleCode: " ",
+           sampleType: " ",
+           ph: " ",
+           ec: " ",
+           oc: " ",
+            microbes: " ",
+            nitrogen: " ",
+            phosphorus: " ",
+            potassium: " ",
+            sulphur: " ",
+            iron: " ",
+            copper: " ",
+            zinc: " ",
+            boron: " ",
+            nickle:  " ",
+            molybdenum: " ",
+            chlorine: " ",
+            aluminume: " ",
+            boron: " ",
+            manganese: " ",
+            area: " "
 
-            if(!values.fname) {
-              return errors;
-            }
+
+
           }}
-          onSubmit={(values,  { setSubmitting }) => {
-            console.log(values);
+          // validate={(values) => {
+          //   const errors = {};
+
+          //   if (!values.farmerName) {
+          //     console.log("error");
+          //   }
+          // }}
+          onSubmit={(values, { setSubmitting }) => {
+            console.log(
+              values
+            )
+           
           }}
         >
-          {({ values, handleSubmit, touched, handleChange, setSubmitting, errors}) => (
+          {({ isSubmitting, values, handleChange, handleSubmit }) => (
             <Form className="form__details" onSubmit={handleSubmit}>
+              
               <h3>Personal Details</h3>
 
-              {/* <Row className="mb-3"> */}
+              <Row className="mb-3">
 
-                <Form.Group as={Col} md="4" className="group">
+              <Form.Group as={Col} md="4" className="group">
                   <Form.Label htmlFor="name">Farmer's Name</Form.Label>
                   <Form.Control
                     required
@@ -91,10 +93,9 @@ function FormReport() {
                     value={values.name}
                     placeholder="Rahul Nagpal"
                   />
-                  <ErrorMessage name="email" component="div" />
                 </Form.Group>
 
-                {/* <Form.Group as={Col} md="4" className="group">
+                <Form.Group as={Col} md="4" className="group">
                   <Form.Label htmlFor="mobile">Mobile No.</Form.Label>
                   <Form.Control
                     name="mobile"
@@ -102,6 +103,7 @@ function FormReport() {
                     required
                     value={values.mobile}
                     onChange={handleChange}
+                   
                     placeholder="99X-XXX-XXXX"
                   />
                 </Form.Group>
@@ -113,6 +115,8 @@ function FormReport() {
                     id="location"
                     required
                     type="text"
+                    value ={ values.location}
+                    onChange={handleChange}
                     placeholder="Nuh"
                   />
                 </Form.Group>
@@ -124,6 +128,8 @@ function FormReport() {
                     id="farmName"
                     required
                     type=""
+                    value ={ values.farmName}
+                    onChange={handleChange}
                     placeholder=""
                   />
                 </Form.Group>
@@ -135,6 +141,8 @@ function FormReport() {
                     id="farmSize"
                     required
                     type=""
+                    value ={ values.farmSize}
+                    onChange={handleChange}
                     placeholder=""
                   />
                 </Form.Group>
@@ -146,12 +154,17 @@ function FormReport() {
                     id="previousCrop"
                     required
                     type="text"
+                    value ={ values.previousCrop}
+                    onChange={handleChange}
                     placeholder="Rice"
                   />
                 </Form.Group>
-              </Row> */}
 
-              {/* <h3>Sample Details</h3>
+
+              </Row>
+
+
+              <h3>Sample Details</h3>
 
               <Row className="mb-3">
                 <Form.Group as={Col} md="4" className="group">
@@ -161,6 +174,8 @@ function FormReport() {
                     id="date"
                     required
                     type="date"
+                    value ={ values.date}
+                    onChange={handleChange}
                   ></Form.Control>
                 </Form.Group>
 
@@ -171,6 +186,8 @@ function FormReport() {
                     id="sampleCode"
                     required
                     type=""
+                    value ={ values.sampleCode}
+                    onChange={handleChange}
                     placeholder="rice009"
                   />
                 </Form.Group>
@@ -182,6 +199,8 @@ function FormReport() {
                     name="sampleType"
                     id="sampleType"
                     type="text"
+                    value ={ values.sampleType}
+                    onChange={handleChange}
                     placeholder="Clay"
                   />
                 </Form.Group>
@@ -196,6 +215,8 @@ function FormReport() {
                     name="ph"
                     id="ph"
                     required
+                    value ={ values.ph}
+                    onChange={handleChange}
                     type="number"
                     placeholder="9"
                   />
@@ -210,6 +231,8 @@ function FormReport() {
                     id="ec"
                     required
                     type="number"
+                    value ={ values.ec}
+                    onChange={handleChange}
                     placeholder=""
                   />
                 </Form.Group>
@@ -223,6 +246,8 @@ function FormReport() {
                     id="oc"
                     required
                     type="number"
+                    value ={ values.oc}
+                    onChange={handleChange}
                     placeholder="9"
                   />
                 </Form.Group>
@@ -234,6 +259,8 @@ function FormReport() {
                     id="microbes"
                     required
                     type="number"
+                    value ={ values.microbes}
+                    onChange={handleChange}
                     placeholder="493.09"
                   />
                 </Form.Group>
@@ -246,8 +273,10 @@ function FormReport() {
                     name="nitrogen"
                     id="nitrogen"
                     required
-                    v
+                    
                     type="number"
+                    value ={ values.nitrogen}
+                    onChange={handleChange}
                     placeholder="9"
                   />
                 </Form.Group>
@@ -260,6 +289,8 @@ function FormReport() {
                     name="phosphorus"
                     id="phosphorus"
                     required
+                    value ={ values.phosphorus}
+                    onChange={handleChange}
                     type="number"
                     placeholder=""
                   />
@@ -273,7 +304,9 @@ function FormReport() {
                     name="potassium"
                     id="potassium"
                     required
+                    onChange={handleChange}
                     type="number"
+                    value ={ values.potassium}
                     placeholder=""
                   />
                 </Form.Group>
@@ -287,6 +320,8 @@ function FormReport() {
                     id="sulphur"
                     required
                     type="number"
+                    value ={ values.sulphur}
+                    onChange={handleChange}
                     placeholder=""
                   />
                 </Form.Group>
@@ -300,6 +335,8 @@ function FormReport() {
                     name="iron"
                     id="iron"
                     type="number"
+                    value ={ values.iron}
+                    onChange={handleChange}
                     placeholder=""
                   />
                 </Form.Group>
@@ -313,6 +350,8 @@ function FormReport() {
                     name="copper"
                     id="copper"
                     type="number"
+                    value ={ values.copper}
+                    onChange={handleChange}
                     placeholder=""
                   />
                 </Form.Group>
@@ -326,6 +365,8 @@ function FormReport() {
                     name="zinc"
                     id="zinc"
                     type="number"
+                    value ={ values.zinc}
+                    onChange={handleChange}
                     placeholder=""
                   />
                 </Form.Group>
@@ -339,6 +380,8 @@ function FormReport() {
                     name="boron"
                     id="boron"
                     type="number"
+                    value ={ values.boron}
+                    onChange={handleChange}
                     placeholder=""
                   />
                 </Form.Group>
@@ -352,6 +395,8 @@ function FormReport() {
                     name="manganese"
                     id="manganese"
                     type="number"
+                    value ={ values.manganese}
+                    onChange={handleChange}
                     placeholder=""
                   />
                 </Form.Group>
@@ -362,9 +407,11 @@ function FormReport() {
                   </Form.Label>
                   <Form.Control
                     required
-                    name="Boron"
-                    id="Boron"
+                    name="boron"
+                    id="boron"
                     type="number"
+                    value ={ values.boron}
+                    onChange={handleChange}
                     placeholder=""
                   />
                 </Form.Group>
@@ -375,9 +422,11 @@ function FormReport() {
                   </Form.Label>
                   <Form.Control
                     required
-                    name="Aluminume"
-                    id="Aluminum"
+                    name="aluminume"
+                    id="aluminum"
                     type="number"
+                    value ={ values.aluminum}
+                    onChange={handleChange}
                     placeholder=""
                   />
                 </Form.Group>
@@ -388,9 +437,11 @@ function FormReport() {
                   </Form.Label>
                   <Form.Control
                     required
-                    name="Chlorine"
-                    id="Chlorine"
+                    name="chlorine"
+                    id="chlorine"
                     type="number"
+                    value ={ values.chlorine}
+                    onChange={handleChange}
                     placeholder=""
                   />
                 </Form.Group>
@@ -401,9 +452,11 @@ function FormReport() {
                   </Form.Label>
                   <Form.Control
                     required
-                    name="Molybdenum"
-                    id="Molybdenum"
+                    name="molybdenum"
+                    id="molybdenum"
                     type="number"
+                    value ={ values.molybdenum}
+                    onChange={handleChange}
                     placeholder=""
                   />
                 </Form.Group>
@@ -414,9 +467,11 @@ function FormReport() {
                   </Form.Label>
                   <Form.Control
                     required
-                    name="Nickle"
-                    id="Nickle"
+                    name="nickle"
+                    id="nickle"
                     type="number"
+                    value= {values.nickle}
+                    onChange={handleChange}
                     placeholder=""
                   />
                 </Form.Group>
@@ -429,17 +484,22 @@ function FormReport() {
               >
                 <Form.Control
                   as="textarea"
+                  required
+                  id="area"
+                  onChange={handleChange}
+                  value= {values.area}
                   placeholder="Leave a Remark here"
                   style={{ height: "200px" }}
                 />
               </FloatingLabel>
 
-              */}
+             
 
-              <div className="form__button">
-                <Button variant="success" className="btn">
-                  Submit
-                </Button>
+              
+              <div className="form__button"> 
+              <Button type="submit"  variant="success" className="btn" disabled={isSubmitting}>
+                Submit
+              </Button>
               </div>
             </Form>
           )}
@@ -449,4 +509,4 @@ function FormReport() {
   );
 }
 
-export default FormReport;
+export default FormRe;

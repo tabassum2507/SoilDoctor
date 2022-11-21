@@ -1,3 +1,5 @@
+import { Form } from "react-bootstrap";
+import FormRe from "./pages/Form/FormRe";
 import FormReport from "./pages/Form/FormReport";
 
 import Home from "./pages/Home/Home";
@@ -11,6 +13,7 @@ function App() {
   return (
     <div className="App">
      {/* <Home /> */}
+     {/* <FormRe /> */}
      {/* <FormReport /> */}
      {/* <TableData /> */}
       <Report />
