@@ -13,10 +13,10 @@ function App() {
   return (
     <div className="App">
      {/* <Home /> */}
-     {/* <FormRe /> */}
+     <FormRe />
      {/* <FormReport /> */}
      {/* <TableData /> */}
-      <Report />
+      {/* <Report /> */}
     </div>
   );
 }

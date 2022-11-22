@@ -69,11 +69,15 @@ function FormRe() {
           //     console.log("error");
           //   }
           // }}
-          onSubmit={(values, { setSubmitting }) => {
-            console.log(
-              values
-            )
-           
+          onSubmit={async (values) => {
+            // let data = await new Promise((r) => setTimeout(r, 500));
+            //       alert(JSON.stringify(values, null, 2));
+
+            var data = JSON.stringify(values);
+            // var data = values;
+            
+
+            console.log(data)
           }}
         >
           {({ isSubmitting, values, handleChange, handleSubmit }) => (
@@ -479,7 +483,6 @@ function FormRe() {
 
               <FloatingLabel
                 className="area"
-                controlId="floatingTextarea2"
                 label="Leave a Remark here"
               >
                 <Form.Control

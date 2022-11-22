@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import logo from "../../images/logo.png";
 import ReactSpeedometer from "react-d3-speedometer";
-
+import FormRe from "../Form/FormRe";
 import "./report.css";
 
 function Report() {
@@ -27,6 +27,8 @@ function Report() {
         <div className="Report">
         <ReactSpeedometer
           value={5}
+          // width={300}
+          // height={500}
           labelFontSize={"15px"}
           valueTextFontSize={"20px"}
           maxValue={14}
@@ -40,6 +42,7 @@ function Report() {
             "#109618 "
           ]}
           currentValueText={"pH: ${value}"}
+          textColor= {"#113e21"}
         />
         </div>
 
@@ -58,6 +61,7 @@ function Report() {
             "#ffe933 "
           ]}
           currentValueText={"EC: ${value}"}
+          textColor= {"#113e21"}
         />
         </div>
 
@@ -70,6 +74,7 @@ function Report() {
           paddingHorizontal={29}
           paddingVertical={29}
           currentValueText={"OC: ${value}"}
+          textColor= {"#113e21"}
         />
         </div>
         </div>
@@ -91,6 +96,7 @@ function Report() {
           paddingHorizontal={29}
           paddingVertical={29}
           currentValueText={"Nitrogen: ${value}"}
+          textColor= {"#113e21"}
         />
         </div>
 
@@ -103,6 +109,7 @@ function Report() {
           paddingHorizontal={29}
           paddingVertical={29}
           currentValueText={"P: ${value}"}
+          textColor= {"#113e21"}
         />
         </div>
 
@@ -116,6 +123,7 @@ function Report() {
           paddingHorizontal={29}
           paddingVertical={29}
           currentValueText={"K: ${value}"}
+          textColor= {"#113e21"}
         />
         </div>
 
@@ -128,13 +136,14 @@ function Report() {
           paddingHorizontal={29}
           paddingVertical={29}
           currentValueText={"S: ${value}"}
+          textColor= {"#113e21"}
         />
         </div>
         </div>
 
         <div className="physicalPara"><h1>Physical Parameters</h1></div>
         
-        <div className="phy">
+        <div className="phy grid">
 
         <div className="Report">
         <ReactSpeedometer
@@ -145,6 +154,33 @@ function Report() {
           paddingHorizontal={29}
           paddingVertical={29}
           currentValueText={"pH: ${value}"}
+          textColor= {"#113e21"}
+        />
+        </div>
+
+        <div className="Report">
+        <ReactSpeedometer
+          value={5}
+          labelFontSize={"15px"}
+          valueTextFontSize={"20px"}
+          maxValue={14}
+          paddingHorizontal={29}
+          paddingVertical={29}
+          currentValueText={"pH: ${value}"}
+          textColor= {"#113e21"}
+        />
+        </div>
+
+        <div className="Report">
+        <ReactSpeedometer
+          value={5}
+          labelFontSize={"15px"}
+          valueTextFontSize={"20px"}
+          maxValue={14}
+          paddingHorizontal={29}
+          paddingVertical={29}
+          currentValueText={"pH: ${value}"}
+          textColor= {"#113e21"}
         />
         </div>
 
@@ -172,7 +208,19 @@ function Report() {
         />
         </div>
 
-        <br></br>
+        <div className="Report">
+        <ReactSpeedometer
+          value={5}
+          labelFontSize={"15px"}
+          valueTextFontSize={"20px"}
+          maxValue={14}
+          paddingHorizontal={29}
+          paddingVertical={29}
+          currentValueText={"pH: ${value}"}
+        />
+        </div>
+
+       
 
         {/* <div className="Report">
         <ReactSpeedometer

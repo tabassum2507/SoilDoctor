@@ -10,12 +10,14 @@ import Paper from '@mui/material/Paper';
 import BarChart from './BarChart';
 import "./table.css"
 
+import {  } from "../Form/FormRe"
+
 function createTable(Parameter, Results, Range) {
    return { Parameter, Results, Range }; 
 }
 
 const rows = [ 
-    createTable("pH", 7.36, 6.5-7.5 ),
+    createTable("pH", 7, 6.5-7.5 ),
     createTable("EC", 7.6, 1-3 ),
     createTable("OC", 4, 5-7.6 ),
     createTable("Nitrogen", 70.3, 280-560 ),

@@ -45,6 +45,7 @@
    font-size: 25px;
    font-weight: 700;
    display: flex;
+   padding: 0 0 50px 0;
    align-items: center;
    justify-content: center;
 }
@@ -53,6 +54,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
+    
+}
+
+.grid{
+  display: grid;
+  margin: 10px 140px;
+  max-width: 100rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
 }
 
