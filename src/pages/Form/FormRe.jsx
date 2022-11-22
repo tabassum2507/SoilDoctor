@@ -30,34 +30,34 @@ function FormRe() {
 
         <Formik
           initialValues={{
-           name: " ",
-           mobile: " ",
-           location: " ",
-           farmName: " ",
-           farmSize: " ",
-           previousCrop: " ",
-           date: " ",
-           sampleCode: " ",
-           sampleType: " ",
-           ph: " ",
-           ec: " ",
-           oc: " ",
-            microbes: " ",
-            nitrogen: " ",
-            phosphorus: " ",
-            potassium: " ",
-            sulphur: " ",
-            iron: " ",
-            copper: " ",
-            zinc: " ",
-            boron: " ",
-            nickle:  " ",
-            molybdenum: " ",
-            chlorine: " ",
-            aluminume: " ",
-            boron: " ",
-            manganese: " ",
-            area: " "
+           "name" : " ",
+           "mobile" : " ",
+           "location" : " ",
+           "farmName": " ",
+           "farmSize": " ",
+           "previousCrop": " ",
+           "date": " ",
+           "sampleCode": " ",
+           "sampleType": " ",
+           "ph": " ",
+           "ec": " ",
+           "oc": " ",
+            "microbes": " ",
+            "nitrogen": " ",
+            "phosphorus": " ",
+            "potassium": " ",
+            "sulphur": " ",
+            "iron": " ",
+            "copper": " ",
+            "zinc": " ",
+            "boron": " ",
+            "nickle":  " ",
+            "molybdenum": " ",
+            "chlorine": " ",
+            "aluminume": " ",
+            "boron": " ",
+            "manganese": " ",
+            "area": " "
 
 
 
@@ -69,21 +69,23 @@ function FormRe() {
           //     console.log("error");
           //   }
           // }}
-          onSubmit={async (values) => {
-            // let data = await new Promise((r) => setTimeout(r, 500));
-            //       alert(JSON.stringify(values, null, 2));
-
-            var data = JSON.stringify(values);
-            // var data = values;
+          onSubmit={ (values) => {
             
 
+            var data = JSON.stringify(JSON.stringify(values))
+
             console.log(data)
+
+            
+            
+            
+            
           }}
         >
           {({ isSubmitting, values, handleChange, handleSubmit }) => (
             <Form className="form__details" onSubmit={handleSubmit}>
               
-              <h3>Personal Details</h3>
+              {/* <h3>Personal Details</h3>
 
               <Row className="mb-3">
 
@@ -166,12 +168,12 @@ function FormRe() {
 
 
               </Row>
-
+ */}
 
               <h3>Sample Details</h3>
 
-              <Row className="mb-3">
-                <Form.Group as={Col} md="4" className="group">
+              {/* <Row className="mb-3"> */}
+                {/* <Form.Group as={Col} md="4" className="group">
                   <Form.Label htmlFor="date">Date Of Collection</Form.Label>
                   <Form.Control
                     name="date"
@@ -181,9 +183,9 @@ function FormRe() {
                     value ={ values.date}
                     onChange={handleChange}
                   ></Form.Control>
-                </Form.Group>
+                </Form.Group> */}
 
-                <Form.Group as={Col} md="4" className="group">
+                {/* <Form.Group as={Col} md="4" className="group">
                   <Form.Label htmlFor="sampleCode">Sample Code</Form.Label>
                   <Form.Control
                     name="sampleCode"
@@ -212,7 +214,7 @@ function FormRe() {
 
               <h3>Soil Testing Result</h3>
 
-              <Row className="mb-3">
+              <Row className="mb-3"> */}
                 <Form.Group as={Col} md="3" className="group">
                   <Form.Label htmlFor="ph">pH</Form.Label>
                   <Form.Control
@@ -226,7 +228,7 @@ function FormRe() {
                   />
                 </Form.Group>
 
-                <Form.Group as={Col} md="3" className="group">
+               {/*} <Form.Group as={Col} md="3" className="group">
                   <Form.Label htmlFor="ec">
                     EC<span className="span__text">ds/m</span>
                   </Form.Label>
@@ -496,7 +498,7 @@ function FormRe() {
                 />
               </FloatingLabel>
 
-             
+              */}
 
               
               <div className="form__button"> 

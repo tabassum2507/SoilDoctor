@@ -4,8 +4,12 @@ import logo from "../../images/logo.png";
 import ReactSpeedometer from "react-d3-speedometer";
 import FormRe from "../Form/FormRe";
 import "./report.css";
+import { Form } from "formik";
 
 function Report() {
+
+  var newpH = JSON.parse(FormRe.pH);
+  console.log(newpH)
   return (
     <>
       <div className="form__header">
@@ -26,7 +30,7 @@ function Report() {
 
         <div className="Report">
         <ReactSpeedometer
-          value={5}
+          value={FormRe.pH}
           // width={300}
           // height={500}
           labelFontSize={"15px"}
@@ -48,7 +52,7 @@ function Report() {
 
         <div className="Report">
         <ReactSpeedometer
-          value={2}
+          value={FormRe.ec}
           labelFontSize={"15px"}
           valueTextFontSize={"20px"}
           maxValue={6}
@@ -67,7 +71,7 @@ function Report() {
 
         <div className="Report">
         <ReactSpeedometer
-          value={6}
+          value={FormRe.oc}
           labelFontSize={"15px"}
           valueTextFontSize={"20px"}
           maxValue={10}
