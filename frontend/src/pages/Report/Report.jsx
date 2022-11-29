@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import logo from "../../images/logo.png";
 import ReactSpeedometer from "react-d3-speedometer";
 import "./report.css";
-import { Form } from "formik";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -336,7 +335,7 @@ function Report({}) {
 
               <div className="Physical">
                 <div className="physicalPara ">
-                  <h1>Micro Nutrients</h1>
+                  <h1>Micro Parameters</h1>
                 </div>
 
                 <div className="phy grid">
@@ -497,11 +496,11 @@ function Report({}) {
             
             <div className="report__footer--grid">
 
-             <div><span className="soil__text">Prepared under the supervision of:</span>Megha Jangra(Master's of Science in Chemistry)</div>
+             <div><span className="soil__text">Prepared under the supervision:<br /></span>Megha Jangra(Master's of Science in Chemistry)</div>
 
-             <div><span className="soil__text">Contact Us:</span>8150085009(Saumya)</div>
+             <div><span className="soil__text">Contact Us:<br /></span>8150085009(Saumya)</div>
 
-             <div><span className="soil__text">Email Us:</span>hello@soildoctor.in</div>
+             <div><span className="soil__text">Email Us:<br /></span>hello@soildoctor.in</div>
 
             </div>
 
