@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form__header {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  justify-content: flex-start;
+}
+
+.form__header--logo {
+  height: 50px;
+}
+
+.form__header__name {
+  color: #a46414;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.form__header__name > span {
+  color: #113e21;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.form__body {
+  height: auto;
+  box-shadow: rgba(50, 50, 93, 0.05) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.1) 0px 3px 7px -3px;
+  border-radius: 15px;
+  margin: 30px;
+  padding: 30px;
+}
+
+h3 {
+  padding: 20px;
+  font-size: 35px;
+}
+
+.form__details {
+  padding: 0 60px;
+}
+
+.group {
+  padding: 10px;
+}
+
+.span__text {
+  font-size: 13px;
+  margin-left: 5px;
+  color: gray;
+}
+
+.area {
+  width: auto;
+  margin: 40px 0;
+}
+
+.form__button{
+
+    display: flex;
+    justify-content: center;
+
+    margin: 0 0 50px 0;
+}
+
+.btn {
+  height: 60px;
+  font-size: 19px;
+  padding: 20px 25px;
+  background: #113e21;
+  box-shadow: 0px 4px 20px rgba(17, 62, 33, 0.2),
+    inset 0px -4px 13px rgba(7, 26, 14, 0.5),
+    inset 0px 4px 8px rgba(78, 138, 100, 0.5);
+  border-radius: 50px;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
