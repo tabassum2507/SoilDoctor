@@ -57,7 +57,7 @@ const BarChart = ({record}) => {
     datasets: [
       {
         axis: "y",
-        label: name,
+        label: result < minRange ? 'Low': result>= minRange && result <= maxRange? 'Sufficent': result > maxRange ? 'High': " ",
         barThickness: 40,
         barPercentage: .5,
         backgroundColor: result < minRange ? '#dc3912': result>= minRange && result <= maxRange? '#ff9900': result > maxRange ? '#109618': " ",
@@ -69,7 +69,7 @@ const BarChart = ({record}) => {
   return (
     <>
     <div >
-       <Bar data={data} options={options}  style={{ height: "130px", width: "100%"}}/>
+       <Bar data={data} options={options}  style={{ height: "130px"}}/>
       </div>
     </>
        

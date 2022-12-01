@@ -59,14 +59,14 @@ export default function TableData(data) {
   });
 
   const PH = {name: 'ph', result: ph , maxValue: 14, stepSize: 0.5, minRange: 6.5, maxRange: 7.5};
-  const EC = {name: 'ec', result: ec, maxValue: 4, stepSize: 1 , minRange: 1 , maxRange: 3 };
-  const OC = {name: 'oc', result: oc, maxValue: 9,  stepSize: 1 , minRange: 5 , maxRange: 7.5 };
+  const EC = {name: 'ec', result: ec, maxValue: 4, stepSize: 0.4 , minRange: 1 , maxRange: 3 };
+  const OC = {name: 'oc', result: oc, maxValue: 9,  stepSize: .7 , minRange: 5 , maxRange: 7.5 };
   const Nitrogen = {name: 'N', result: nitrogen, maxValue: 600,  stepSize: 50 , minRange: 240, maxRange: 560 };
-   const Phosphorus = {name: 'P', result: phosphorus, maxValue: 60,  stepSize: 10 , minRange: 11, maxRange: 25 };
+   const Phosphorus = {name: 'P', result: phosphorus, maxValue: 60,  stepSize: 7 , minRange: 11, maxRange: 25 };
    const Potassium = {name: 'K', result: potassium, maxValue: 330,  stepSize: 30 , minRange: 110, maxRange: 280 };
-  const Sulphur = {name: 'S', result: sulphur, maxValue: 30,  stepSize: 5 , minRange: 10, maxRange: 20};
-  const Iron = {name: 'Fe', result: iron, maxValue: 12,  stepSize: 3 , minRange:5.5, maxRange: 9.5 };
-  const Copper = {name: 'Cu', result: copper, maxValue: 2,  stepSize: 0.3 , minRange: 0.2, maxRange: 0.4 };
+  const Sulphur = {name: 'S', result: sulphur, maxValue: 30,  stepSize: 3 , minRange: 10, maxRange: 20};
+  const Iron = {name: 'Fe', result: iron, maxValue: 12,  stepSize: 2 , minRange:5.5, maxRange: 9.5 };
+  const Copper = {name: 'Cu', result: copper, maxValue: 2,  stepSize: 0.2 , minRange: 0.2, maxRange: 0.4 };
   const Zinc = {name: 'Zn', result: zinc, maxValue: 3,  stepSize: 0.3 , minRange: 0.6, maxRange: 1.2 };
   const Boron = {name: 'B', result: boron, maxValue: 1.5,  stepSize: 0.2 , minRange: 0.5, maxRange: 1 };
   const Manganese = {name: 'Mn', result: manganese, maxValue: 12,  stepSize: 1 , minRange: 5.5, maxRange: 9.5 };
@@ -204,13 +204,13 @@ export default function TableData(data) {
                     </tr>
 
                     <tr>
-                      <td>EC</td>
+                      <td>EC<br /><span>(ds/m)</span></td>
                       <td>{ec}</td>
                       <td>2 - 3</td>
                     </tr>
 
                     <tr>
-                      <td>OC</td>
+                      <td>OC<br /><span>(g/kg)</span></td>
                       <td>{oc}</td>
                       <td>6 - 7.5</td>
                     </tr>
@@ -229,25 +229,25 @@ export default function TableData(data) {
                       <th>Range</th>
                     </tr>
                     <tr>
-                      <td>Nitrogen</td>
+                      <td>Nitrogen<br /><span>(kg/hec)</span></td>
                       <td>{nitrogen}</td>
                       <td>280-560</td>
                     </tr>
 
                     <tr>
-                      <td>Phosphorus</td>
+                      <td>Phosphorus<br /><span>(kg/hec)</span></td>
                       <td>{phosphorus}</td>
                       <td>28 - 56</td>
                     </tr>
 
                     <tr>
-                      <td>Potassium</td>
+                      <td>Potassium<br /><span>(kg/hec)</span></td>
                       <td>{potassium}</td>
                       <td>140-280</td>
                     </tr>
 
                     <tr>
-                      <td>Sulphur</td>
+                      <td>Sulphur<br /><span>(kg/hec)</span></td>
                       <td>{sulphur}</td>
                       <td>10-20</td>
                     </tr>
@@ -260,36 +260,36 @@ export default function TableData(data) {
                   <div className="tableData">
                     <table>
                       <tr className="tableBox">
-                        <th>Parameter</th>
+                        <th>Parameter<br /><span>(mg/kg)</span></th>
                         <th>Result</th>
                         <th>Range</th>
                       </tr>
                       <tr>
-                        <td>Iron</td>
+                        <td>Iron<br /><span>(mg/kg)</span></td>
                         <td>{iron}</td>
                         <td>4.5 - 9.5</td>
                       </tr>
 
                       <tr>
-                        <td>Copper</td>
+                        <td>Copper<br /><span>(mg/kg)</span></td>
                         <td>{copper}</td>
                         <td>0.2 - 1</td>
                       </tr>
 
                       <tr>
-                        <td>Zinc</td>
+                        <td>Zinc<br /><span>(mg/kg)</span></td>
                         <td>{zinc}</td>
                         <td>0.6 - 1.5</td>
                       </tr>
 
                       <tr>
-                        <td>Boron</td>
+                        <td>Boron<br /><span>(mg/kg)</span></td>
                         <td>{boron}</td>
                         <td>0.1 - 0.5</td>
                       </tr>
 
                       <tr>
-                        <td>Manganese</td>
+                        <td>Manganese<br /><span>(mg/kg)</span></td>
                         <td>{manganese}</td>
                         <td>2 - 4</td>
                       </tr>

@@ -53,8 +53,8 @@ button{
 
 .data__name{
   color: #65b180;
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 700;
   margin: 30px 70px;
 
 }
@@ -64,18 +64,18 @@ button{
 }
 
 .tableBox{
-  padding: 40px;
+  padding: 60px;
 }
 
 table > tr {
  color: #113e21;
- font-size: 18px;
+ font-size: 16 px;
  font-weight: 500;
  
 }
 
 tr > td{
-  padding: 70px 200px 30px 0;
+  padding: 63px 80px 30px 0;
 }
 
 
@@ -84,11 +84,16 @@ tr > td{
 }
 
 .bar_table{
-  padding: 130px 80px 130px 0;
+  padding: 120px 80px 130px 0;
   width: 100%;
 }
 
 .macro_bar{
-  padding: 130px 0 0 0;
+  padding: 20px 0 0 0;
+}
+
+td > span{
+  font-size: 12px;
+  font-size: 600;
 }
 
