@@ -118,7 +118,7 @@ function Report({}) {
           <div className="soil__info">
             <div className="detail__section">
               <div>
-                <span className="soil__text">Date of Collation:</span>
+                <span className="soil__text">Date of Collection:</span>
                 {data?.date}
               </div>
               <div>

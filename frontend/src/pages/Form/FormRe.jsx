@@ -110,7 +110,6 @@ function FormRe() {
             "molybdenum": " ",
             "chlorine": " ",
             "aluminume": " ",
-            "boron": " ",
             "manganese": " ",
             "area": " "
           }}

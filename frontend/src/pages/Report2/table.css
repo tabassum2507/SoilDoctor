@@ -25,8 +25,6 @@
     color: #113e21;
     font-size: 16px;
     font-weight: 700;
-  
-
 }
 
 .table_button{
@@ -50,5 +48,47 @@ button{
   align-items: center;
   font-weight: 500;
 
+}
+
+
+.data__name{
+  color: #65b180;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 30px 70px;
+
+}
+
+.tableData{
+  padding: 10px 0 10px 70px;
+}
+
+.tableBox{
+  padding: 40px;
+}
+
+table > tr {
+ color: #113e21;
+ font-size: 18px;
+ font-weight: 500;
+ 
+}
+
+tr > td{
+  padding: 70px 200px 30px 0;
+}
+
+
+.table__bar{
+  display: flex;
+}
+
+.bar_table{
+  padding: 130px 80px 130px 0;
+  width: 100%;
+}
+
+.macro_bar{
+  padding: 130px 0 0 0;
 }
 

@@ -1,4 +1,4 @@
-import * as React from "react";
+import { React, useRef } from "react";
 import logo from "../../images/logo.png";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -16,52 +16,65 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 
 import FormRe from "../Form/FormRe";
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import "../Report/report.css";
 import { HiChevronRight } from "react-icons/hi2";
-
-function createTable(Parameter, Results, Range) {
-  return { Parameter, Results, Range };
-}
+import { Link } from "react-router-dom";
+import { useReactToPrint } from "react-to-print";
 
 const data = JSON.parse(localStorage.getItem("data"));
-console.log(data);
 
-const rows = [
-  createTable("pH", data?.ph, "6.5 - 7.5"),
-  createTable("EC(ds/m)", data?.ec, "1-3"),
-  createTable("OC(g/kg)", data?.oc, "5-7.6"),
-  createTable("Nitrogen(kg/ha)", data?.nitrogen, "280-560"),
-  createTable("Phosphorus(kg/ha)", data?.phosphorus, "28-56"),
-  createTable("Potassium(kg/ha)", data?.potassium, "140-280"),
-  createTable("Sulphur(mg/kg)", data?.sulphur, "10-20"),
-  createTable("Iron(mg/kg)", data?.iron, "4.5-9.5"),
-  createTable("Copper(mg/kg)", data?.copper, "0.2-1"),
-  createTable("Zinc", data?.zinc, "0.6-1.5"),
-  createTable("Boron", data?.boron, "0.1-0.5"),
-  createTable("Aluminum", data?.aluminum, "2-4"),
-  createTable("Nickle", data?.nickle, "2-4"),
-  createTable("Manganese", data?.manganese, "2-4"),
-];
+let ph = data?.ph
+let name = data?.name
+let mobile = data?.mobile 
+let location =  data?.location
+let farmName = data?.farmName
+let farmSize = data?.farmSize
+let previousCrop = data?.previousCrop
+let date = data?.date
+let sampleCode = data?.sampleCode
+let sampleType = data?.sampleType
+let ec = data?.ec
+let oc = data?.oc
+let microbes = data?.microbes
+let nitrogen = data?.nitrogen
+let phosphorus = data?.phosphorus
+let potassium = data?.potassium
+let calcium = data?.calcium
+let sulphur = data?.sulphur
+let iron = data?.iron
+let copper = data?.copper
+let zinc = data?.zinc
+let boron = data?.boron
+let nickle = data?.nickle
+let manganese = data?.manganese
+let chlorine = data?.chlorine
+let area = data?.area
 
-// const rows = [
-//     createTable("pH", 7, 6.5-7.5 ),
-//     createTable("EC", 7.6, 1-3 ),
-//     createTable("OC", 4, 5-7.6 ),
-//     createTable("Nitrogen", 70.3, 280-560 ),
-//     createTable("Phosphorus", 99.3, 28-56 ),
-//     createTable("Potassium", 257.2, 140-280 ),
-//     createTable("Sulphur", 106.9, 10-20 ),
-//     createTable("Iron", 1.3, 4.5-9.5 ),
-//     createTable("copper", 0.1, 0.2-1 ),
-//     createTable("Zinc", 4.43, 0.6-1.5 ),
-//     createTable("Boron", 1.95, 0.1-0.5 ),
-//     createTable("Manganese", 6.53, 2-4 ),
-// ]
+export default function TableData(data) {
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+    documentTitle: "graph-data",
+    // onAfterPrint: () => alert("print successfully"),
+  });
 
-export default function TableData() {
+  const PH = {name: 'ph', result: ph , maxValue: 14, stepSize: 0.5, minRange: 6.5, maxRange: 7.5};
+  const EC = {name: 'ec', result: ec, maxValue: 4, stepSize: 1 , minRange: 1 , maxRange: 3 };
+  const OC = {name: 'oc', result: oc, maxValue: 9,  stepSize: 1 , minRange: 5 , maxRange: 7.5 };
+  const Nitrogen = {name: 'N', result: nitrogen, maxValue: 600,  stepSize: 50 , minRange: 240, maxRange: 560 };
+   const Phosphorus = {name: 'P', result: phosphorus, maxValue: 60,  stepSize: 10 , minRange: 11, maxRange: 25 };
+   const Potassium = {name: 'K', result: potassium, maxValue: 330,  stepSize: 30 , minRange: 110, maxRange: 280 };
+  const Sulphur = {name: 'S', result: sulphur, maxValue: 30,  stepSize: 5 , minRange: 10, maxRange: 20};
+  const Iron = {name: 'Fe', result: iron, maxValue: 12,  stepSize: 3 , minRange:5.5, maxRange: 9.5 };
+  const Copper = {name: 'Cu', result: copper, maxValue: 2,  stepSize: 0.3 , minRange: 0.2, maxRange: 0.4 };
+  const Zinc = {name: 'Zn', result: zinc, maxValue: 3,  stepSize: 0.3 , minRange: 0.6, maxRange: 1.2 };
+  const Boron = {name: 'B', result: boron, maxValue: 1.5,  stepSize: 0.2 , minRange: 0.5, maxRange: 1 };
+  const Manganese = {name: 'Mn', result: manganese, maxValue: 12,  stepSize: 1 , minRange: 5.5, maxRange: 9.5 };
+
+
+
   return (
-    <>
+    <div>
       <div className="form__header">
         <img
           className="home__header--logo"
@@ -81,73 +94,290 @@ export default function TableData() {
           name="row-radio-buttons-group"
         >
           <Link to="/graph">
-          <FormControlLabel
-            className="text__form"
-            value="female"
-            control={<Radio color="success" size="large" />}
-            label="Simple Report"
-          />
+            <FormControlLabel
+              className="text__form"
+              value=""
+              control={<Radio color="success" size="medium" />}
+              label="Simple Report"
+            />
           </Link>
-          
+
           <FormControlLabel
             className="text__form"
-            value="male"
-            control={<Radio color="success" size="large" />}
+            value=""
+            control={<Radio color="success" size="medium" />}
             label="Detailed Report"
           />
-          <Link to="/both" >
-          <FormControlLabel
-            className="text__form"
-            value="other"
-            control={<Radio color="success" size="large" />}
-            label="Both Reports"
-          />
+          <Link to="/both">
+            <FormControlLabel
+              className="text__form"
+              value="other"
+              control={<Radio color="success" size="medium" />}
+              label="Both Reports"
+            />
           </Link>
-          
         </RadioGroup>
       </FormControl>
 
-      <div className="tableData" style={{ position: "relative" }}>
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell className="tableName">
-                  <p>Parameters</p>
-                </TableCell>
-                <TableCell  className="tableName" align="right">
-                  <p>Results</p>
-                </TableCell>
-                <TableCell className="tableName" align="right">
-                  <p>Range</p>
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows.map((row) => (
-                <TableRow key={row.Parameter}>
-                  <TableCell component="th" scope="row"  className="rowData">
-                    <p >{row.Parameter}</p>
-                  </TableCell>
-                  <TableCell align="right" className="rowData" >
-                    <p >{row.Results}</p>
-                  </TableCell>
-                  <TableCell align="right" className="rowData" >
-                    <p >{row.Range}</p>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+      <div className="paper">
+        <div
+          className="print"
+          style={{ width: "100%", height: "100%" }}
+          ref={componentRef}
+        >
+          <div className="report__header">
+            <div className="report__logo">
+              <img
+                className="header__logo"
+                src={logo}
+                style={{ marginRight: "10px" }}
+              />
 
-        <BarChart className="barchart" />
+              <div className="header__name">Soil Doctor</div>
+            </div>
+
+            <div className="header__heading">Soil Analysis Report</div>
+          </div>
+
+          <div className="info">
+            <div className="detail__section">
+              <div>
+                <span className="detail__section--label">Name:</span>
+                {name}
+              </div>
+              <div>
+                <span className="detail__section--label">Mobile No.:</span>
+                {mobile}
+              </div>
+              <div>
+                <span className="detail__section--label">Location:</span>
+                {location}
+              </div>
+              <div>
+                <span className="detail__section--label">Previous Crop:</span>
+                {previousCrop}
+              </div>
+              <div>
+                <span className="detail__section--label">Farm Size:</span>
+                {farmSize}
+              </div>
+              <div>
+                <span className="detail__section--label">Farm Name:</span>
+                {farmName}
+              </div>
+            </div>
+          </div>
+
+          <div className="soil__info">
+            <div className="detail__section">
+              <div>
+                <span className="soil__text">Date of Collection:</span>
+                {date}
+              </div>
+              <div>
+                <span className="soil__text">Sample Code:</span>
+                {sampleCode}
+              </div>
+              <div>
+                <span className="soil__text">Sample Type:</span>
+                {sampleType}
+              </div>
+            </div>
+          </div>
+
+          <div className="table__bar">
+            <div className="para_table">
+              <div className="physical__data">
+                <h1 className="data__name">Physical</h1>
+
+                <div className="tableData">
+                  <table className="tableBox">
+                    <tr>
+                      <th>Parameter</th>
+                      <th>Result</th>
+                      <th>Range</th>
+                    </tr>
+                    <tr>
+                      <td>pH</td>
+                      <td>{ph}</td>
+                      <td>6.5 - 7.5</td>
+                    </tr>
+
+                    <tr>
+                      <td>EC</td>
+                      <td>{ec}</td>
+                      <td>2 - 3</td>
+                    </tr>
+
+                    <tr>
+                      <td>OC</td>
+                      <td>{oc}</td>
+                      <td>6 - 7.5</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+              <div className="macro__data">
+                <h1 className="data__name">Macro</h1>
+
+                <div className="tableData">
+                  <table>
+                    <tr className="tableBox">
+                      <th>Parameter</th>
+                      <th>Result</th>
+                      <th>Range</th>
+                    </tr>
+                    <tr>
+                      <td>Nitrogen</td>
+                      <td>{nitrogen}</td>
+                      <td>280-560</td>
+                    </tr>
+
+                    <tr>
+                      <td>Phosphorus</td>
+                      <td>{phosphorus}</td>
+                      <td>28 - 56</td>
+                    </tr>
+
+                    <tr>
+                      <td>Potassium</td>
+                      <td>{potassium}</td>
+                      <td>140-280</td>
+                    </tr>
+
+                    <tr>
+                      <td>Sulphur</td>
+                      <td>{sulphur}</td>
+                      <td>10-20</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div className="macro__data">
+                  <h1 className="data__name">Micro</h1>
+
+                  <div className="tableData">
+                    <table>
+                      <tr className="tableBox">
+                        <th>Parameter</th>
+                        <th>Result</th>
+                        <th>Range</th>
+                      </tr>
+                      <tr>
+                        <td>Iron</td>
+                        <td>{iron}</td>
+                        <td>4.5 - 9.5</td>
+                      </tr>
+
+                      <tr>
+                        <td>Copper</td>
+                        <td>{copper}</td>
+                        <td>0.2 - 1</td>
+                      </tr>
+
+                      <tr>
+                        <td>Zinc</td>
+                        <td>{zinc}</td>
+                        <td>0.6 - 1.5</td>
+                      </tr>
+
+                      <tr>
+                        <td>Boron</td>
+                        <td>{boron}</td>
+                        <td>0.1 - 0.5</td>
+                      </tr>
+
+                      <tr>
+                        <td>Manganese</td>
+                        <td>{manganese}</td>
+                        <td>2 - 4</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bar_table">
+              <BarChart record={PH} className="barchart" />
+              <BarChart record={EC} className="barchart" />
+              <BarChart record={OC} className="barchart" />
+
+              <div className="macro_bar">
+              <BarChart record={Nitrogen} className="barchart" />
+              <BarChart record={Phosphorus}className="barchart" />
+              <BarChart record={Potassium} className="barchart" />
+              <BarChart record={Sulphur} className="barchart" />
+
+              </div>
+
+              <div className="macro_bar">
+              <BarChart record={Iron} className="barchart" />
+              <BarChart record={Copper} className="barchart" />
+              <BarChart record={Zinc} className="barchart" />
+              <BarChart record={Boron} className="barchart" />
+              <BarChart record={Manganese} className="barchart" />
+
+              </div>
+             
+              
+            </div>
+          </div>
+
+          <div className="remark">
+            <div>{area}</div>
+          </div>
+
+          <div className="note__section">
+            <div>NOTE:</div>
+            <ul>
+              <li>
+                This report shows the fertility status of the given sample. It
+                doesn't guarantee crop production.{" "}
+              </li>
+              <li>
+                Reports prepared by instruments which may contain slight errors
+                at times.
+              </li>
+            </ul>
+          </div>
+
+          <div className="report__footer">
+            <div className="report__footer--grid">
+              <div>
+                <span className="soil__text">
+                  Prepared under the supervision:
+                  <br />
+                </span>
+                Megha Jangra(Master's of Science in Chemistry)
+              </div>
+
+              <div>
+                <span className="soil__text">
+                  Contact Us:
+                  <br />
+                </span>
+                8150085009(Saumya)
+              </div>
+
+              <div>
+                <span className="soil__text">
+                  Email Us:
+                  <br />
+                </span>
+                hello@soildoctor.in
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-   
-      <div className="table_button">
-      <button type="submit" >Download <HiChevronRight style={{ marginLeft : "20px"}}/></button>
+      <div className="table_button" onClick={handlePrint}>
+        <button type="submit">
+          Download <HiChevronRight style={{ marginLeft: "20px" }} />
+        </button>
       </div>
-    </>
+    </div>
   );
 }
