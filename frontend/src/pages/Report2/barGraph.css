@@ -1,0 +1,25 @@
+body{
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+  
+}
+
+.color_range{
+  display: flex;
+  justify-content: space-around;
+}
+
+.graph{
+  height: 800px;
+  width: 1200px
+}
+
+.chart__bar{
+  height: 40px;
+  border-radius: 0 20px 20px 0;
+  background-color: aqua;
+  margin: 30px;
+}

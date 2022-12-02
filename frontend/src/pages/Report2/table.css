@@ -1,40 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.tableData{
-    padding: 60px;
-    display: grid;
-    grid-template-columns: auto auto;
-    
+.tableData {
+  padding: 60px;
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
-.tableName > p{
-    color: #113e21;
-    font-size: 20px;
-    font-weight: 700;
-   
-
+.tableName > p {
+  color: #113e21;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .rowData > p {
-    color: #113e21;
-    font-size: 16px;
-    font-weight: 700;
+  color: #113e21;
+  font-size: 16px;
+  font-weight: 700;
 }
 
-.table_button{
-    display: flex;
+.table_button {
+  display: flex;
   justify-content: center;
   margin: 100px;
 }
 
-button{
-    height: 60px;
+button {
+  height: 60px;
   font-size: 19px;
   padding: 20px 25px;
   background: #113e21;
@@ -47,53 +44,82 @@ button{
   display: flex;
   align-items: center;
   font-weight: 500;
-
 }
 
-
-.data__name{
+.data__name {
   color: #65b180;
   font-size: 30px;
   font-weight: 700;
   margin: 30px 70px;
-
 }
 
-.tableData{
+table {
+  height: auto;
+  width: 450px;
+}
+
+.tableData {
   padding: 10px 0 10px 70px;
 }
 
-.tableBox{
+.tableBox {
   padding: 60px;
 }
 
 table > tr {
- color: #113e21;
- font-size: 16 px;
- font-weight: 500;
- 
+  color: #113e21;
+  font-size: 16px;
+  font-weight: 600;
+}
+tr > th {
+  padding: 0 0 20px 0;
 }
 
-tr > td{
-  padding: 63px 80px 30px 0;
+tr > td {
+  padding: 50px 25px 40px 25px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
-
-.table__bar{
+.table__bar {
   display: flex;
+  text-align: center;
 }
 
-.bar_table{
-  padding: 120px 80px 130px 0;
+.bar_table {
+  padding: 140px 80px 130px 50px;
   width: 100%;
 }
 
-.macro_bar{
-  padding: 20px 0 0 0;
+.macro_bar {
+  padding: 160px 0 0 0;
 }
 
-td > span{
+td > span {
   font-size: 12px;
   font-size: 600;
+}
+
+.barchart {
+  padding: 0 20px;
+}
+
+.macro_bar > div {
+  padding: 0 0 10px 0;
+}
+
+@page {
+  size: 297mm 210mm;
+}
+
+@media all {
+  .pagebreak {
+    display: none;
+  }
+}
+
+@media print {
+  .pagebreak {
+    page-break-before: always;
+  }
 }
 

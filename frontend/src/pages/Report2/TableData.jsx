@@ -20,6 +20,8 @@ import "../Report/report.css";
 import { HiChevronRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import { useReactToPrint } from "react-to-print";
+import BarGraph from "./BarGraph";
+
 
 const data = JSON.parse(localStorage.getItem("data"));
 
@@ -260,7 +262,7 @@ export default function TableData(data) {
                   <div className="tableData">
                     <table>
                       <tr className="tableBox">
-                        <th>Parameter<br /><span>(mg/kg)</span></th>
+                        <th>Parameter</th>
                         <th>Result</th>
                         <th>Range</th>
                       </tr>
@@ -279,7 +281,7 @@ export default function TableData(data) {
                       <tr>
                         <td>Zinc<br /><span>(mg/kg)</span></td>
                         <td>{zinc}</td>
-                        <td>0.6 - 1.5</td>
+                        <td>0.6-1.5</td>
                       </tr>
 
                       <tr>
@@ -299,16 +301,21 @@ export default function TableData(data) {
               </div>
             </div>
 
-            <div className="bar_table">
-              <BarChart record={PH} className="barchart" />
-              <BarChart record={EC} className="barchart" />
-              <BarChart record={OC} className="barchart" />
+            {/* <div className="bar_table">
+              <div><BarChart record={PH} className="barchart" /></div>
+              <div><BarChart record={EC} className="barchart" /></div>
+              <div><BarChart record={OC} className="barchart" /></div>
+              
+             
+              
 
               <div className="macro_bar">
-              <BarChart record={Nitrogen} className="barchart" />
-              <BarChart record={Phosphorus}className="barchart" />
-              <BarChart record={Potassium} className="barchart" />
-              <BarChart record={Sulphur} className="barchart" />
+              <div><BarChart record={Nitrogen} className="barchart" /></div>
+              <div><BarChart record={Phosphorus}className="barchart" /></div>
+              <div><BarChart record={Potassium} className="barchart" /></div>
+              <div><BarChart record={Sulphur} className="barchart" /></div>
+              
+             
 
               </div>
 
@@ -322,7 +329,13 @@ export default function TableData(data) {
               </div>
              
               
-            </div>
+            </div> */}
+
+           <BarGraph />
+
+
+
+
           </div>
 
           <div className="remark">
@@ -331,7 +344,7 @@ export default function TableData(data) {
 
           <div className="note__section">
             <div>NOTE:</div>
-            <ul>
+            <ul >
               <li>
                 This report shows the fertility status of the given sample. It
                 doesn't guarantee crop production.{" "}

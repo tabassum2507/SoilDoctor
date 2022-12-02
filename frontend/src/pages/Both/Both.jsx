@@ -5,9 +5,8 @@ import './both.css'
 
 function Both() {
   return (
-    <div className='both'>
+  <></>
       
-    </div>
   )
 }
 

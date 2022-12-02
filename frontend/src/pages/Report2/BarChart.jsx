@@ -68,8 +68,8 @@ const BarChart = ({record}) => {
   };
   return (
     <>
-    <div >
-       <Bar data={data} options={options}  style={{ height: "130px"}}/>
+    <div className="bar" >
+       <Bar data={data} options={options}  style={{ height: "130px", width: "400px"}}/>
       </div>
     </>
        
