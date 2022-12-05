@@ -4,6 +4,7 @@ body{
 
 li {
   list-style-type: none;
+  width: 40%;
   
 }
 
@@ -13,13 +14,55 @@ li {
 }
 
 .graph{
+  position: relative;
+  margin: 110px 50px;
   height: 800px;
-  width: 1200px
+  width: 900px
 }
 
 .chart__bar{
-  height: 40px;
+
+  height: 30px;
   border-radius: 0 20px 20px 0;
-  background-color: aqua;
-  margin: 30px;
+  margin: 25px;
 }
+
+.chart__label{
+  padding-top: 10px;
+  line-height: 30px;
+  color: white;
+}
+
+.title{
+  color: #113e21;
+  font-weight: 700;
+}
+
+.second{
+  margin: 120px 0;
+}
+
+
+.low{
+  background-color: #dc3912;
+  height: 30px;
+  border-radius: 0 20px 20px 0;
+  margin: 25px;
+
+}
+
+.sufficient{
+  background-color: #109618;
+  height: 30px;
+  border-radius: 0 20px 20px 0;
+  margin: 25px;
+}
+
+.high{
+  background-color: #ff9900;
+  height: 30px;
+  border-radius: 0 20px 20px 0;
+  margin: 25px;
+}
+
+ 

@@ -46,21 +46,21 @@ function Report({}) {
           <FormControlLabel
             className="text__form"
             value="female"
-            control={<Radio color="success" size="large" />}
+            control={<Radio color="success" size="medium" />}
             label="Simple Report"
           />
           <Link to="/report">
             <FormControlLabel
               className="text__form"
               value="male"
-              control={<Radio color="success" size="large" />}
+              control={<Radio color="success" size="medium" />}
               label="Detailed Report"
             />
           </Link>
           <FormControlLabel
             className="text__form"
             value="other"
-            control={<Radio color="success" size="large" />}
+            control={<Radio color="success" size="medium" />}
             label="Both Reports"
           />
         </RadioGroup>

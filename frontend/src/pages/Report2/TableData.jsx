@@ -225,11 +225,6 @@ export default function TableData(data) {
 
                 <div className="tableData">
                   <table>
-                    <tr className="tableBox">
-                      <th>Parameter</th>
-                      <th>Result</th>
-                      <th>Range</th>
-                    </tr>
                     <tr>
                       <td>Nitrogen<br /><span>(kg/hec)</span></td>
                       <td>{nitrogen}</td>
@@ -261,11 +256,6 @@ export default function TableData(data) {
 
                   <div className="tableData">
                     <table>
-                      <tr className="tableBox">
-                        <th>Parameter</th>
-                        <th>Result</th>
-                        <th>Range</th>
-                      </tr>
                       <tr>
                         <td>Iron<br /><span>(mg/kg)</span></td>
                         <td>{iron}</td>
@@ -338,7 +328,7 @@ export default function TableData(data) {
 
           </div>
 
-          <div className="remark">
+          <div className="remark" >
             <div>{area}</div>
           </div>
 

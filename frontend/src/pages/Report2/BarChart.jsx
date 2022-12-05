@@ -60,7 +60,7 @@ const BarChart = ({record}) => {
         label: result < minRange ? 'Low': result>= minRange && result <= maxRange? 'Sufficent': result > maxRange ? 'High': " ",
         barThickness: 40,
         barPercentage: .5,
-        backgroundColor: result < minRange ? '#dc3912': result>= minRange && result <= maxRange? '#ff9900': result > maxRange ? '#109618': " ",
+        backgroundColor: result < minRange ? '#dc3912': result>= minRange && result <= maxRange? '#ff9900': result > maxRange ? '#ff9900': " ",
         borderColor: "rgb(255, 99, 132)",
         data: [ result ] 
       },

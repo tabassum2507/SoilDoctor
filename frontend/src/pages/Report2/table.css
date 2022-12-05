@@ -50,12 +50,12 @@ button {
   color: #65b180;
   font-size: 30px;
   font-weight: 700;
-  margin: 30px 70px;
+  margin: 15px 70px;
 }
 
 table {
   height: auto;
-  width: 450px;
+  width: 650px;
 }
 
 .tableData {
@@ -76,8 +76,7 @@ tr > th {
 }
 
 tr > td {
-  padding: 50px 25px 40px 25px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  padding: 5px 25px ;
 }
 
 .table__bar {

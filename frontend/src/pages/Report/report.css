@@ -78,7 +78,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:  40px 0;
+  margin:  100px 0 50px 0;
   background-color: #f2e7d9;
   height: auto;
   padding: 0 80px;
@@ -89,7 +89,8 @@
   font-size: 16px;
   font-weight: 600;
   color: #563104;
-  padding: 20px;
+  padding: 40px;
+ 
 }
 
 .data_rec{
