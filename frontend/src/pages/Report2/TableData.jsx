@@ -44,7 +44,7 @@ let manganese = data?.manganese
 let chlorine = data?.chlorine
 let area = data?.area
 
-export default function TableData(data) {
+ function TableData(data) {
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
@@ -363,3 +363,5 @@ export default function TableData(data) {
     </div>
   );
 }
+
+export default TableData;
