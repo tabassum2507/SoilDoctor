@@ -1,7 +1,8 @@
 import React from 'react'
 import logo from "../../images/logo.png";
-// import './home.css'
+// import './style.css'
 import { HiChevronRight } from "react-icons/hi2";
+import { Link } from '@mui/material';
 
 function Home() {
   return (
@@ -13,7 +14,9 @@ function Home() {
         </div>
 
         <div className="home__button">
-            <button type="submit" >Soil Recommendation <HiChevronRight style={{ marginLeft : "20px"}}/></button>
+          <button type="submit" >
+             Soil Recommendation <HiChevronRight style={{ marginLeft : "20px"}}/>
+          </button>
         </div>
 
 

@@ -1,13 +1,5 @@
 import { React, useRef } from "react";
 import logo from "../../images/logo.png";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import BarChart from "./BarChart";
 import "./table.css";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
@@ -59,19 +51,6 @@ export default function TableData(data) {
     documentTitle: "graph-data",
     // onAfterPrint: () => alert("print successfully"),
   });
-
-  const PH = {name: 'ph', result: ph , maxValue: 14, stepSize: 0.5, minRange: 6.5, maxRange: 7.5};
-  const EC = {name: 'ec', result: ec, maxValue: 4, stepSize: 0.4 , minRange: 1 , maxRange: 3 };
-  const OC = {name: 'oc', result: oc, maxValue: 9,  stepSize: .7 , minRange: 5 , maxRange: 7.5 };
-  const Nitrogen = {name: 'N', result: nitrogen, maxValue: 600,  stepSize: 50 , minRange: 240, maxRange: 560 };
-   const Phosphorus = {name: 'P', result: phosphorus, maxValue: 60,  stepSize: 7 , minRange: 11, maxRange: 25 };
-   const Potassium = {name: 'K', result: potassium, maxValue: 330,  stepSize: 30 , minRange: 110, maxRange: 280 };
-  const Sulphur = {name: 'S', result: sulphur, maxValue: 30,  stepSize: 3 , minRange: 10, maxRange: 20};
-  const Iron = {name: 'Fe', result: iron, maxValue: 12,  stepSize: 2 , minRange:5.5, maxRange: 9.5 };
-  const Copper = {name: 'Cu', result: copper, maxValue: 2,  stepSize: 0.2 , minRange: 0.2, maxRange: 0.4 };
-  const Zinc = {name: 'Zn', result: zinc, maxValue: 3,  stepSize: 0.3 , minRange: 0.6, maxRange: 1.2 };
-  const Boron = {name: 'B', result: boron, maxValue: 1.5,  stepSize: 0.2 , minRange: 0.5, maxRange: 1 };
-  const Manganese = {name: 'Mn', result: manganese, maxValue: 12,  stepSize: 1 , minRange: 5.5, maxRange: 9.5 };
 
 
 
@@ -193,28 +172,28 @@ export default function TableData(data) {
                 <h1 className="data__name">Physical</h1>
 
                 <div className="tableData">
-                  <table className="tableBox">
+                  <table >
                     <tr>
-                      <th>Parameter</th>
+                      <th  className="table__padding">Parameter</th>
                       <th>Result</th>
-                      <th>Range</th>
+                      <th className="range__padding">Range</th>
                     </tr>
                     <tr>
-                      <td>pH</td>
-                      <td>{ph}</td>
-                      <td>6.5 - 7.5</td>
-                    </tr>
-
-                    <tr>
-                      <td>EC<br /><span>(ds/m)</span></td>
-                      <td>{ec}</td>
-                      <td>2 - 3</td>
+                      <td  className="table__padding">pH</td>
+                      <td className="result_value">{ph}</td>
+                      <td className="range__padding">6.5 - 7.5</td>
                     </tr>
 
                     <tr>
-                      <td>OC<br /><span>(g/kg)</span></td>
-                      <td>{oc}</td>
-                      <td>6 - 7.5</td>
+                      <td  className="table__padding">EC<br /><span>(ds/m)</span></td>
+                      <td className="result_value" >{ec}</td>
+                      <td className="range__padding">2 - 3</td>
+                    </tr>
+
+                    <tr>
+                      <td  className="table__padding">OC<br /><span>(g/kg)</span></td>
+                      <td className="result_value">{oc}</td>
+                      <td className="range__padding">6 - 7.5</td>
                     </tr>
                   </table>
                 </div>
@@ -226,27 +205,27 @@ export default function TableData(data) {
                 <div className="tableData">
                   <table>
                     <tr>
-                      <td>Nitrogen<br /><span>(kg/hec)</span></td>
-                      <td>{nitrogen}</td>
-                      <td>280-560</td>
+                      <td  className="table__padding">Nitrogen<br /><span>(kg/hec)</span></td>
+                      <td className="result_value">{nitrogen}</td>
+                      <td className="range__padding">280-560</td>
                     </tr>
 
                     <tr>
-                      <td>Phosphorus<br /><span>(kg/hec)</span></td>
-                      <td>{phosphorus}</td>
-                      <td>28 - 56</td>
+                      <td  className="table__padding">Phosphorus<br /><span>(kg/hec)</span></td>
+                      <td className="result_value">{phosphorus}</td>
+                      <td className="range__padding">28 - 56</td>
                     </tr>
 
                     <tr>
-                      <td>Potassium<br /><span>(kg/hec)</span></td>
-                      <td>{potassium}</td>
-                      <td>140-280</td>
+                      <td  className="table__padding">Potassium<br /><span>(kg/hec)</span></td>
+                      <td className="result_value">{potassium}</td>
+                      <td className="range__padding">140-280</td>
                     </tr>
 
                     <tr>
-                      <td>Sulphur<br /><span>(kg/hec)</span></td>
-                      <td>{sulphur}</td>
-                      <td>10-20</td>
+                      <td  className="table__padding">Sulphur<br /><span>(kg/hec)</span></td>
+                      <td className="result_value">{sulphur}</td>
+                      <td className="range__padding">10-20</td>
                     </tr>
                   </table>
                 </div>
@@ -257,33 +236,33 @@ export default function TableData(data) {
                   <div className="tableData">
                     <table>
                       <tr>
-                        <td>Iron<br /><span>(mg/kg)</span></td>
-                        <td>{iron}</td>
-                        <td>4.5 - 9.5</td>
+                        <td  className="table__padding">Iron<br /><span>(mg/kg)</span></td>
+                        <td className="result_value">{iron}</td>
+                        <td className="range__padding">4.5 - 9.5</td>
                       </tr>
 
                       <tr>
-                        <td>Copper<br /><span>(mg/kg)</span></td>
-                        <td>{copper}</td>
-                        <td>0.2 - 1</td>
+                        <td  className="table__padding">Copper<br /><span>(mg/kg)</span></td>
+                        <td className="result_value">{copper}</td>
+                        <td className="range__padding">0.2 - 1</td>
                       </tr>
 
                       <tr>
-                        <td>Zinc<br /><span>(mg/kg)</span></td>
-                        <td>{zinc}</td>
-                        <td>0.6-1.5</td>
+                        <td  className="table__padding">Zinc<br /><span>(mg/kg)</span></td>
+                        <td className="result_value">{zinc}</td>
+                        <td className="range__padding">0.6-1.5</td>
                       </tr>
 
                       <tr>
-                        <td>Boron<br /><span>(mg/kg)</span></td>
-                        <td>{boron}</td>
-                        <td>0.1 - 0.5</td>
+                        <td  className="table__padding">Boron<br /><span>(mg/kg)</span></td>
+                        <td className="result_value">{boron}</td>
+                        <td className="range__padding">0.1 - 0.5</td>
                       </tr>
 
                       <tr>
-                        <td>Manganese<br /><span>(mg/kg)</span></td>
-                        <td>{manganese}</td>
-                        <td>2 - 4</td>
+                        <td  className="table__padding">Manganese<br /><span>(mg/kg)</span></td>
+                        <td className="result_value">{manganese}</td>
+                        <td className="range__padding">2 - 4</td>
                       </tr>
                     </table>
                   </div>

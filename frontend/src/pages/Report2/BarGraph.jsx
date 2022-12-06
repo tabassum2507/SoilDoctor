@@ -5,30 +5,6 @@ import "./barGraph.css";
 
 const data = JSON.parse(localStorage.getItem("data"));
 
-let name = data?.name;
-let mobile = data?.mobile;
-let location = data?.location;
-let farmName = data?.farmName;
-let farmSize = data?.farmSize;
-let previousCrop = data?.previousCrop;
-let date = data?.date;
-let sampleCode = data?.sampleCode;
-let sampleType = data?.sampleType;
-let oc = data?.oc;
-let microbes = data?.microbes;
-let nitrogen = data?.nitrogen;
-let phosphorus = data?.phosphorus;
-let potassium = data?.potassium;
-let calcium = data?.calcium;
-let sulphur = data?.sulphur;
-let iron = data?.iron;
-let copper = data?.copper;
-let zinc = data?.zinc;
-let boron = data?.boron;
-let nickle = data?.nickle;
-let manganese = data?.manganese;
-let chlorine = data?.chlorine;
-let area = data?.area;
 
 function BarGraph() {
 
@@ -46,12 +22,6 @@ function BarGraph() {
   const manganese__value = (data?.manganese/5)*100
  
 
- 
-  
-
- 
-
-
   return (
     <div>
       <div className="graph">
@@ -61,22 +31,22 @@ function BarGraph() {
               <div className="chaer chart--para">
                 <ul className="chart--horizon">
                   <li
-                    className={ `${ph__value < 33 ? "low" : ph__value >= 33 && ph__value <= 66 ? "sufficient": ph__value > 66 ? "high" : " " }`}
+                    className={ `${ph__value < 33 ? "low" : ph__value >= 33 && ph__value <= 66 ? "sufficient": ph__value > 66 ? "high" : " " }` }
                     style={{width: `${ph__value+ "%"}`}}>
                   
-                    <span className="chart__label">{data?.ph}</span>
+                    <span className="chart__label">{data?.ph}{" "}</span>
                   </li>
 
                   <li
                     className={ `${ec__value < 33 ? "low" : ec__value >= 33 && ec__value <= 66 ? "sufficient": ec__value > 66 ? "high" : " " }`}
                     style={{width: `${ec__value+ "%"}` }}>
-                    <span className="chart__label">{data?.ec}(ds/m)</span>
+                    <span className="chart__label">{data?.ec}</span>
                   </li>
 
                   <li
                     className={ `${ec__value < 33 ? "low" : ec__value >= 33 && ec__value <= 66 ? "sufficient": ec__value > 66 ? "high" : " " }`}
                     style={{width: `${oc__value+ "%"}` }}>
-                    <span className="chart__label">{data?.oc}(g/kg)</span>
+                    <span className="chart__label">{data?.oc}</span>
                   </li>
                 </ul>
  
@@ -98,19 +68,19 @@ function BarGraph() {
                   <li
                     className={ `${phosphoru__value < 33 ? "low" : phosphoru__value >= 33 && phosphoru__value <= 66 ? "sufficient": phosphoru__value > 66 ? "high" : " " }`}
                     style={{width: `${phosphoru__value+ "%"}` }}>
-                    <span className="chart__label">{data?.phosphorus}(kg/hec)</span>
+                    <span className="chart__label">{data?.phosphorus}</span>
                   </li>
 
                   <li
                     className={ `${potassium__value < 33 ? "low" : potassium__value >= 33 && potassium__value <= 66 ? "sufficient": potassium__value > 66 ? "high" : " " }`}
                     style={{width: `${potassium__value+ "%"}` }}>
-                    <span className="chart__label">{data?.potassium}(kg/hec)</span>
+                    <span className="chart__label">{data?.potassium}</span>
                   </li>
 
                   <li
                     className={ `${sulphur__value < 33 ? "low" : sulphur__value >= 33 && sulphur__value <= 66 ? "sufficient": sulphur__value > 66 ? "high" : " " }`}
                     style={{width: `${sulphur__value+ "%"}` }}>
-                    <span className="chart__label">{data?.sulphur}(kg/hec)</span>
+                    <span className="chart__label">{data?.sulphur}</span>
                   </li>
                 </ul>
 
@@ -125,31 +95,31 @@ function BarGraph() {
                 <li
                     className={ `${iron__value < 33 ? "low" : iron__value >= 33 && iron__value <= 66 ? "sufficient": iron__value > 66 ? "high" : " " }`}
                     style={{width: `${iron__value+ "%"}` }}>
-                    <span className="chart__label">{data?.iron}(kg/hec)</span>
+                    <span className="chart__label">{data?.iron}</span>
                   </li>
 
                   <li
                     className={ `${copper__value < 33 ? "low" : copper__value >= 33 && copper__value <= 66 ? "sufficient": copper__value > 66 ? "high" : " " }`}
                     style={{width: `${copper__value+ "%"}` }}>
-                    <span className="chart__label">{data?.copper}(kg/hec)</span>
+                    <span className="chart__label">{data?.copper}</span>
                   </li>
 
                   <li
                     className={ `${zinc__value < 33 ? "low" : zinc__value >= 33 && zinc__value <= 66 ? "sufficient": zinc__value > 66 ? "high" : " " }`}
                     style={{width: `${zinc__value+ "%"}` }}>
-                    <span className="chart__label">{data?.zinc}(kg/hec)</span>
+                    <span className="chart__label">{data?.zinc}</span>
                   </li>
 
                   <li
                     className={ `${boron__value < 33 ? "low" : boron__value >= 33 && boron__value <= 66 ? "sufficient": boron__value > 66 ? "high" : " " }`}
                     style={{width: `${boron__value+ "%"}` }}>
-                    <span className="chart__label">{data?.boron}(mg/kg)</span>
+                    <span className="chart__label">{data?.boron}</span>
                   </li>
 
                   <li
                     className={ `${manganese__value < 33 ? "low" : manganese__value >= 33 && manganese__value <= 66 ? "sufficient": manganese__value > 66 ? "high" : " " }`}
                     style={{width: `${manganese__value+ "%"}` }}>
-                    <span className="chart__label">{data?.manganese}(mg/kg)</span>
+                    <span className="chart__label">{data?.manganese}</span>
                   </li>
                 </ul>
 
@@ -157,10 +127,11 @@ function BarGraph() {
                 <div
                   style={{
                     position: "relative",
-                    bottom: "-.75%",
-                    right: "5.9%",
+                    bottom: "-3.75%",
                     display: "flex",
-                    width: "50%",
+                    width: "65%",
+                    height: "50px",
+                    right: "-6.8%",
                     backgroundColor: "white",
                     marginBottom: "0",
                     justifyContent: "space-between",
@@ -171,7 +142,7 @@ function BarGraph() {
                   <div
                     style={{
                       backgroundColor: "#dc3912",
-                      padding: "20px",
+                      padding: "15px",
                       width: "100%",
                       color: "white",
                     }}
@@ -181,7 +152,7 @@ function BarGraph() {
                   <div
                     style={{
                       backgroundColor: "#109618",
-                      padding: "20px",
+                      padding: "15px",
                       width: "100%",
                       color: "white",
                     }}
@@ -191,7 +162,7 @@ function BarGraph() {
                   <div
                     style={{
                       backgroundColor: "#ff9900",
-                      padding: "20px",
+                      padding: "15px",
                       width: "100%",
                       color: "white",
                     }}
@@ -207,7 +178,7 @@ function BarGraph() {
                     right: "",
                     display: "flex",
                     width: "100%",
-                    height: "960px",
+                    height: "850px",
                     backgroundColor: "white",
                     marginBottom: "0",
                     justifyContent: "space-between",

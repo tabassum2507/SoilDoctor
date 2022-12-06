@@ -6,61 +6,12 @@ import { Badge, Button, FloatingLabel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Formik, Field, ErrorMessage,  } from "formik";
 import { HiChevronRight } from "react-icons/hi2";
   
 function FormRe() {
   const navigate=useNavigate()
-
-  // const url = " "
-  // const [ data, setData] = useState({
-  //   "name" : " ",
-  //   "mobile" : " ",
-  //   "location" : " ",
-  //   "farmName": " ",
-  //   "farmSize": " ",
-  //   "previousCrop": " ",
-  //   "date": " ",
-  //   "sampleCode": " ",
-  //   "sampleType": " ",
-  //   "ph": " ",
-  //   "ec": " ",
-  //   "oc": " ",
-  //    "microbes": " ",
-  //    "nitrogen": " ",
-  //    "phosphorus": " ",
-  //    "potassium": " ",
-  //    "sulphur": " ",
-  //    "iron": " ",
-  //    "copper": " ",
-  //    "zinc": " ",
-  //    "boron": " ",
-  //    "nickle":  " ",
-  //    "molybdenum": " ",
-  //    "chlorine": " ",
-  //    "aluminume": " ",
-  //    "boron": " ",
-  //    "manganese": " ",
-  //    "area": " "
-
-  // })
-
-
-  // function handle(e) {
-  //    var newdata = { ...data}
-  //    newdata[e.target.id] = e.target.value 
-  //    setData(newdata)
-     
-  // }
- 
-  // function submit(e) {
-  //   e.preventDefault();
-  //   console.log(data)
-  // }
-
-   
-
 
 
   return (
@@ -569,7 +520,9 @@ function FormRe() {
 
               
               <div className="table_button">
-               <button type="submit" >Download <HiChevronRight style={{ marginLeft : "20px"}}/></button>
+                <Link to="/graph">
+                <button type="submit" >Submit<HiChevronRight style={{ marginLeft : "20px"}}/></button>
+                </Link>
                </div>
             </Form>
          )}

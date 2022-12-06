@@ -48,23 +48,20 @@ button {
 
 .data__name {
   color: #65b180;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
-  margin: 15px 70px;
+  margin: 8px 70px;
 }
 
 table {
   height: auto;
-  width: 650px;
+  width: 460px;
 }
 
 .tableData {
   padding: 10px 0 10px 70px;
 }
 
-.tableBox {
-  padding: 60px;
-}
 
 table > tr {
   color: #113e21;
@@ -76,7 +73,7 @@ tr > th {
 }
 
 tr > td {
-  padding: 5px 25px ;
+  padding: 5px 0 ;
 }
 
 .table__bar {
@@ -107,7 +104,7 @@ td > span {
 }
 
 @page {
-  size: 297mm 210mm;
+  size: 210mm 297mm;
 }
 
 @media all {
@@ -121,4 +118,17 @@ td > span {
     page-break-before: always;
   }
 }
+.table__padding{
+  width: 100px;
+} 
 
+tr {
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.range__padding{
+  width: 100px;
+}

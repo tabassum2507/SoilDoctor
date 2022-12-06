@@ -1,5 +1,4 @@
 import { React, useRef } from "react";
-import ReactDOM from "react-dom";
 import logo from "../../images/logo.png";
 import ReactSpeedometer from "react-d3-speedometer";
 import "./report.css";
@@ -141,8 +140,8 @@ function Report({}) {
               <div className="Report">
                 <ReactSpeedometer
                   value={data?.ph}
-                  labelFontSize={"13px"}
-                  valueTextFontSize={"16px"}
+                  labelFontSize={"11px"}
+                  valueTextFontSize={"14px"}
                   maxValue={14}
                   paddingHorizontal={19}
                   paddingVertical={19}
@@ -151,8 +150,8 @@ function Report({}) {
                   currentValueText={"pH: ${value}"}
                   textColor={"#113e21"}
                   ringWidth={20}
-                  height={150}
-                  width={230}
+                  height={120}
+                  width={240}
                 />
                 <div className="data_rec">
                   {data?.ph < 6
@@ -168,8 +167,8 @@ function Report({}) {
               <div className="Report">
                 <ReactSpeedometer
                   value={data?.ec}
-                  labelFontSize={"13px"}
-                  valueTextFontSize={"16px"}
+                  labelFontSize={"11px"}
+                  valueTextFontSize={"14px"}
                   maxValue={6}
                   paddingHorizontal={19}
                   paddingVertical={19}
@@ -178,8 +177,8 @@ function Report({}) {
                   currentValueText={"EC(ds/m): ${value}"}
                   textColor={"#113e21"}
                   ringWidth={20}
-                  height={150}
-                  width={230}
+                  height={120}
+                  width={240}
                   className="speedometer"
                 />
                 <div className="data_rec">
@@ -196,8 +195,8 @@ function Report({}) {
               <div className="Report">
                 <ReactSpeedometer
                   value={data?.oc}
-                  labelFontSize={"13px"}
-                  valueTextFontSize={"16px"}
+                  labelFontSize={"11px"}
+                  valueTextFontSize={"14px"}
                   maxValue={1}
                   paddingHorizontal={19}
                   paddingVertical={19}
@@ -206,8 +205,8 @@ function Report({}) {
                   currentValueText={"OC: ${value}"}
                   textColor={"#113e21"}
                   ringWidth={20}
-                  height={150}
-                  width={230}
+                  height={120}
+                  width={240}
                 />
                 <div className="data_rec">
                   {data?.oc < 0.5
@@ -230,8 +229,8 @@ function Report({}) {
                 <div className="Report">
                   <ReactSpeedometer
                     value={data?.nitrogen}
-                    labelFontSize={"13px"}
-                    valueTextFontSize={"16px"}
+                    labelFontSize={"11px"}
+                    valueTextFontSize={"14px"}
                     maxValue={1000}
                     paddingHorizontal={19}
                     paddingVertical={19}
@@ -240,8 +239,8 @@ function Report({}) {
                     currentValueText={"Nitrogen(Kg/hec): ${value}"}
                     textColor={"#113e21"}
                     ringWidth={20}
-                    height={150}
-                    width={230}
+                    height={120}
+                    width={240}
                   />
                   <div className="data_rec">
                     {data?.nitrogen < 280
@@ -257,8 +256,8 @@ function Report({}) {
                 <div className="Report">
                   <ReactSpeedometer
                     value={data?.phosphorus}
-                    labelFontSize={"13px"}
-                    valueTextFontSize={"16px"}
+                    labelFontSize={"11px"}
+                    valueTextFontSize={"14px"}
                     maxValue={100}
                     paddingHorizontal={19}
                     paddingVertical={19}
@@ -268,8 +267,8 @@ function Report({}) {
                     textColor={"#113e21"}
                   
                     ringWidth={20}
-                    height={150}
-                    width={230}
+                    height={120}
+                  width={240}
                   />
                   <div className="data_rec">
                     {data?.phosphorus < 10
@@ -285,8 +284,8 @@ function Report({}) {
                 <div className="Report">
                   <ReactSpeedometer
                     value={data?.potassium}
-                    labelFontSize={"13px"}
-                    valueTextFontSize={"16px"}
+                    labelFontSize={"11px"}
+                    valueTextFontSize={"14px"}
                     maxValue={500}
                     paddingHorizontal={19}
                     paddingVertical={19}
@@ -296,8 +295,8 @@ function Report({}) {
                     textColor={"#113e21"}
                     
                     ringWidth={20}
-                    height={150}
-                    width={230}
+                    height={120}
+                  width={240}
                   />
                   <div className="data_rec">
                     {data?.potassium < 108
@@ -313,8 +312,8 @@ function Report({}) {
                 <div className="Report">
                   <ReactSpeedometer
                     value={data?.sulphur}
-                    labelFontSize={"13px"}
-                    valueTextFontSize={"16px"}
+                    labelFontSize={"11px"}
+                    valueTextFontSize={"14px"}
                     maxValue={50}
                     paddingHorizontal={19}
                     paddingVertical={19}
@@ -324,8 +323,8 @@ function Report({}) {
                     textColor={"#113e21"}
                     
                     ringWidth={20}
-                    height={150}
-                    width={230}
+                    height={120}
+                    width={240}
                   />
                   <div className="data_rec">
                     {data?.sulphur < 10 ? "Add 16(Kg/Acre) of Sulphate" : " "}
@@ -342,8 +341,8 @@ function Report({}) {
                   <div className="Report">
                     <ReactSpeedometer
                       value={data?.iron}
-                      labelFontSize={"13px"}
-                      valueTextFontSize={"16px"}
+                      labelFontSize={"11px"}
+                      valueTextFontSize={"14px"}
                       maxValue={20}
                       paddingHorizontal={19}
                       paddingVertical={19}
@@ -353,8 +352,8 @@ function Report({}) {
                       
                       textColor={"#113e21"}
                       ringWidth={20}
-                      height={150}
-                      width={230}
+                      height={120}
+                      width={240}
                     />
                     <div className="data_rec">
                       {data?.iron < 5.5
@@ -366,8 +365,8 @@ function Report({}) {
                   <div className="Report">
                     <ReactSpeedometer
                       value={data?.copper}
-                      labelFontSize={"13px"}
-                      valueTextFontSize={"16px"}
+                      labelFontSize={"11px"}
+                      valueTextFontSize={"14px"}
                       maxValue={3}
                       paddingHorizontal={19}
                       paddingVertical={19}
@@ -377,8 +376,8 @@ function Report({}) {
                       
                       textColor={"#113e21"}
                       ringWidth={20}
-                      height={150}
-                      width={230}
+                      height={120}
+                      width={240}
                     />
                     <div className="data_rec">
                       {data?.copper < 0.2
@@ -390,8 +389,8 @@ function Report({}) {
                   <div className="Report">
                     <ReactSpeedometer
                       value={data?.zinc}
-                      labelFontSize={"13px"}
-                      valueTextFontSize={"16px"}
+                      labelFontSize={"11px"}
+                      valueTextFontSize={"14px"}
                       maxValue={5}
                       paddingHorizontal={19}
                       paddingVertical={19}
@@ -401,8 +400,8 @@ function Report({}) {
                       
                       textColor={"#113e21"}
                       ringWidth={20}
-                      height={150}
-                      width={230}
+                      height={120}
+                      width={240}
                     />
                     <div className="data_rec">
                       {data?.zinc < 0.6
@@ -414,8 +413,8 @@ function Report({}) {
                   <div className="Report">
                     <ReactSpeedometer
                       value={data?.boron}
-                      labelFontSize={"13px"}
-                      valueTextFontSize={"16px"}
+                      labelFontSize={"11px"}
+                      valueTextFontSize={"14px"}
                       maxValue={3}
                       paddingHorizontal={19}
                       paddingVertical={19}
@@ -424,8 +423,8 @@ function Report({}) {
                       currentValueText={"Boron(mg/kg) : ${value}"}
                       textColor={"#113e21"}
                       ringWidth={20}
-                      height={150}
-                      width={230}
+                      height={120}
+                      width={240}
                     />
                     <div className="data_rec">
                       {data?.boron < 0.5 ? "Add 2(Kg/Acre) of Borax" : " "}
@@ -435,8 +434,8 @@ function Report({}) {
                   <div className="Report">
                     <ReactSpeedometer
                       value={data?.nickle}
-                      labelFontSize={"13px"}
-                      valueTextFontSize={"16px"}
+                      labelFontSize={"11px"}
+                      valueTextFontSize={"14px"}
                       maxValue={15}
                       paddingHorizontal={19}
                       paddingVertical={19}
@@ -446,16 +445,16 @@ function Report({}) {
             
                       textColor={"#113e21"}
                       ringWidth={20}
-                      height={150}
-                      width={230}
+                      height={120}
+                      width={240}
                     />
                   </div>
 
                   <div className="Report">
                     <ReactSpeedometer
                       value={data?.aluminum}
-                      labelFontSize={"13px"}
-                      valueTextFontSize={"16px"}
+                      labelFontSize={"11px"}
+                      valueTextFontSize={"14px"}
                       maxValue={15}
                       paddingHorizontal={19}
                       paddingVertical={19}
@@ -465,8 +464,8 @@ function Report({}) {
                       
                       textColor={"#113e21"}
                       ringWidth={20}
-                      height={150}
-                      width={230}
+                      height={120}
+                      width={240}
                     />
                   </div>
                 </div>

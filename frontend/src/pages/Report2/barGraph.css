@@ -2,11 +2,15 @@ body{
   box-sizing: border-box;
 }
 
-li {
+.chart--horizon  > li {
   list-style-type: none;
-  width: 40%;
-  
+
 }
+
+.chart--horizon{
+  width: 560px;
+}
+
 
 .color_range{
   display: flex;
@@ -14,21 +18,20 @@ li {
 }
 
 .graph{
-  position: relative;
-  margin: 110px 50px;
+  margin: 92px 0;
   height: 800px;
-  width: 900px
+  width: 820px
 }
 
 .chart__bar{
 
   height: 30px;
   border-radius: 0 20px 20px 0;
-  margin: 25px;
+  margin: 8px;
 }
 
 .chart__label{
-  padding-top: 10px;
+  font-size: 14px;
   line-height: 30px;
   color: white;
 }
@@ -39,8 +42,10 @@ li {
 }
 
 .second{
-  margin: 120px 0;
+  margin: 90px 0;
 }
+
+
 
 
 .low{
